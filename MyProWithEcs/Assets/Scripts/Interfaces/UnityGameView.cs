@@ -34,6 +34,8 @@ public class UnityGameView : MonoBehaviour, IViewController
 
             _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
         }
+
+
         //this.gameObject.transform.Translate(newPosition * Time.deltaTime*_entity.speed.speed);
         Rigidbody2D _rigBody = this.gameObject.GetComponent<Rigidbody2D>();
         _rigBody.velocity= new Vector3(newPosition.x*_entity.speed.speed, _rigBody.velocity.y, 0);
@@ -47,7 +49,10 @@ public class UnityGameView : MonoBehaviour, IViewController
             Flip();
         }
 
-        _animator.SetFloat("HorizontalSpeed", Mathf.Abs(_rigBody.velocity.x));
+        if(_animator!=null)
+        {
+            _animator.SetFloat("HorizontalSpeed", Mathf.Abs(_rigBody.velocity.x));
+        }
     }
     
 

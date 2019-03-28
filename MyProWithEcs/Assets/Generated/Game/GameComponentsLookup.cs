@@ -8,26 +8,34 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int GameSetup = 0;
-    public const int Horizontal = 1;
-    public const int Jump = 2;
-    public const int JumpForce = 3;
-    public const int JumpSpeed = 4;
-    public const int JumpTimes = 5;
-    public const int Movement = 6;
-    public const int Player = 7;
-    public const int Position = 8;
-    public const int PositionListener = 9;
-    public const int Resource = 10;
-    public const int Speed = 11;
-    public const int Sprite = 12;
-    public const int View = 13;
+    public const int ATK = 0;
+    public const int Attack = 1;
+    public const int Enemy = 2;
+    public const int GameSetup = 3;
+    public const int Horizontal = 4;
+    public const int HP = 5;
+    public const int Jump = 6;
+    public const int JumpForce = 7;
+    public const int JumpSpeed = 8;
+    public const int JumpTimes = 9;
+    public const int Movement = 10;
+    public const int Player = 11;
+    public const int Position = 12;
+    public const int PositionListener = 13;
+    public const int Resource = 14;
+    public const int Speed = 15;
+    public const int Sprite = 16;
+    public const int View = 17;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
+        "ATK",
+        "Attack",
+        "Enemy",
         "GameSetup",
         "Horizontal",
+        "HP",
         "Jump",
         "JumpForce",
         "JumpSpeed",
@@ -43,8 +51,12 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ATKComponent),
+        typeof(AttackComponent),
+        typeof(EnemyComponent),
         typeof(GameSetupComponent),
         typeof(HorizontalComponent),
+        typeof(HPComponent),
         typeof(JumpComponent),
         typeof(JumpForceComponent),
         typeof(JumpSpeedComponent),

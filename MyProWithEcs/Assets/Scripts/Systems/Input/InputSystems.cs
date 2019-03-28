@@ -8,5 +8,6 @@ public class InputSystems : Feature
         //Add(new InputSystem(contexts));
         Add(new HorizontalInputSystem(contexts));
         Add(new JumpInputSystem(contexts));
+        Add(new AttackInputSystem(contexts));
     }
 }

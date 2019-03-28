@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class UnityInputService : IInputService
 {
+    public bool GetFireButtonDown()
+    {
+        return Input.GetKeyDown(KeyCode.Z);
+    }
+
     public float GetHorizontal()
     {
         return Input.GetAxisRaw("Horizontal");

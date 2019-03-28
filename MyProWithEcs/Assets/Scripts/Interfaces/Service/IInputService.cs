@@ -7,4 +7,5 @@ public interface IInputService
     float GetHorizontal();
     float GetVertical();
     bool GetJumpButtonDown();
+    bool GetFireButtonDown();
 }

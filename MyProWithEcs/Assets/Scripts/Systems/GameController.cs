@@ -52,11 +52,15 @@ public class GameController : MonoBehaviour
 
         return new Feature("Systems")
            .Add(new ServiceRegistrationSystems(contexts, _services))//第一个注册
+
+           .Add(new AddViewSystem(contexts))
            .Add(new GameEventSystems(contexts))//事件监听系统，在其中添加新的子系统监听控件
            .Add(new InputSystems(contexts))
 
-            .Add(new AddViewSystem(contexts))
+            .Add(new IntializeSnakeSystem(contexts))
             .Add(new IntializePlayerSystem(contexts))
+
+            .Add(new AttackSystem(contexts))
             .Add(new ControSystems(contexts));
     }
 }
