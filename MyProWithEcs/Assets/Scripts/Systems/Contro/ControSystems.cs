@@ -7,7 +7,6 @@ public class ControSystems : Feature
     {
         
         Add(new JumpTSystem(contexts));
-        Add(new HorizontalMoveSystem(contexts));
-        
+        Add(new HorizontalMoveTSystem(contexts));
     }
 }

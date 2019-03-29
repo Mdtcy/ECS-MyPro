@@ -4,41 +4,80 @@ using UnityEngine;
 using Entitas;
 using Entitas.Unity;
 
-public class AttackSystem
- : ReactiveSystem<GameEntity>
+//public class AttackSystem
+// : ReactiveSystem<GameEntity>
+//{
+//    readonly GameContext _context;
+//    public AttackSystem(Contexts context) : base(context.game)
+//    {
+//        _context = context.game;
+//    }
+
+//    protected override void Execute(List<GameEntity> entities)
+//    {
+//        foreach (var e in entities)
+//        {
+
+//            e.isMoving = false;
+
+//            var go = e.view.IViewControllerInstance;
+//            go.Attack();
+//            go.HelpAttack();
+//            e.AddTimer(1);
+//            if (e.timer.value < 0)
+//            {
+//                e.isAttack = false;
+//                e.isMoving = true;
+//                e.RemoveTimer();
+//            }
+//            有一部分逻辑进到了下面。如果要修改需要进入下面修改
+//            e.isAttack = false;
+//            e.isMoving = true;
+//        }
+//    }
+
+//    protected override bool Filter(GameEntity entity)
+//    {
+//        return entity.isAttack;
+//    }
+
+//    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+//    {
+//        return context.CreateCollector(GameMatcher.Attack);
+//    }
+//}
+
+public class AttackSystem : IExecuteSystem
 {
-    readonly GameContext _context;
-    public AttackSystem(Contexts context) : base(context.game)
+    readonly IGroup<GameEntity> _attacks;
+
+    public AttackSystem(Contexts contexts)
     {
-        _context = context.game;
+
+        _attacks = contexts.game.GetGroup(GameMatcher.AllOf(GameMatcher.Attack,GameMatcher.AttackSpeed));
     }
 
-    protected override void Execute(List<GameEntity> entities)
+    public void Execute()
     {
-        foreach (var e in entities)
+        foreach (GameEntity e in _attacks.GetEntities())
         {
-            //调用每个拥有attack的entity的Attack方法
-            if (e.isPlayer)
+            e.isMoving = false;
+            var go = e.view.IViewControllerInstance;
+            
+            if(!e.hasTimer)
             {
-                //var go = e.view.IViewControllerInstance;
-                //var bullet = _context.CreateEntity();
-                Debug.Log("Attack");
-                //bullet.AddSprite("Bullet");
-               // bullet.AddPosition(go.Position + new Vector3(2, 0, 0));
-               // bullet.AddHorizontal(10f);
+
+                e.AddTimer(e.attackSpeed.value);
             }
 
-            e.isAttack = false;
+            if (e.timer.value < 0)
+            {
+                go.Attack();
+                e.isAttack = false;
+                e.isMoving = true;
+                e.RemoveTimer();
+            }
+
         }
-    }
-
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.isAttack;
-    }
-
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-    {
-        return context.CreateCollector(GameMatcher.Attack);
     }
 }

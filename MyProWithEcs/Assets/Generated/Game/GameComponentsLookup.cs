@@ -10,29 +10,38 @@ public static class GameComponentsLookup {
 
     public const int ATK = 0;
     public const int Attack = 1;
-    public const int Enemy = 2;
-    public const int GameSetup = 3;
-    public const int Horizontal = 4;
-    public const int HP = 5;
-    public const int Jump = 6;
-    public const int JumpForce = 7;
-    public const int JumpSpeed = 8;
-    public const int JumpTimes = 9;
-    public const int Movement = 10;
-    public const int Player = 11;
-    public const int Position = 12;
-    public const int PositionListener = 13;
-    public const int Resource = 14;
-    public const int Speed = 15;
-    public const int Sprite = 16;
-    public const int View = 17;
+    public const int AttackSpeed = 2;
+    public const int Direction = 3;
+    public const int Enemy = 4;
+    public const int FindPlayer = 5;
+    public const int GameSetup = 6;
+    public const int Horizontal = 7;
+    public const int HP = 8;
+    public const int Jump = 9;
+    public const int JumpForce = 10;
+    public const int JumpSpeed = 11;
+    public const int JumpTimes = 12;
+    public const int Movement = 13;
+    public const int Moving = 14;
+    public const int Player = 15;
+    public const int Position = 16;
+    public const int PositionListener = 17;
+    public const int Resource = 18;
+    public const int Speed = 19;
+    public const int Sprite = 20;
+    public const int Timer = 21;
+    public const int Velocity = 22;
+    public const int View = 23;
 
-    public const int TotalComponents = 18;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
         "ATK",
         "Attack",
+        "AttackSpeed",
+        "Direction",
         "Enemy",
+        "FindPlayer",
         "GameSetup",
         "Horizontal",
         "HP",
@@ -41,19 +50,25 @@ public static class GameComponentsLookup {
         "JumpSpeed",
         "JumpTimes",
         "Movement",
+        "Moving",
         "Player",
         "Position",
         "PositionListener",
         "Resource",
         "Speed",
         "Sprite",
+        "Timer",
+        "Velocity",
         "View"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ATKComponent),
         typeof(AttackComponent),
+        typeof(AttackSpeedComponent),
+        typeof(Direction),
         typeof(EnemyComponent),
+        typeof(FindPlayerComponent),
         typeof(GameSetupComponent),
         typeof(HorizontalComponent),
         typeof(HPComponent),
@@ -62,12 +77,15 @@ public static class GameComponentsLookup {
         typeof(JumpSpeedComponent),
         typeof(JumpTimesComponent),
         typeof(MovementComponent),
+        typeof(MovingComponent),
         typeof(PlayerComponent),
         typeof(PositionComponent),
         typeof(PositionListenerComponent),
         typeof(ResourceComponent),
         typeof(SpeedComponent),
         typeof(SpriteComponent),
+        typeof(TimerComponent),
+        typeof(VelocityComponent),
         typeof(ViewComponent)
     };
 }

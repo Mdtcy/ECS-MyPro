@@ -12,7 +12,13 @@ public interface IViewController
     bool Active { get; set; }
     void InitializeView(Contexts contexts, IEntity Entity);
     void DestroyView();
-    void MoveHorizontal(Vector3 newPosition);
+
+    void MoveHorizontal(float direction);
+
+    //void HorizontalMoveT(float direction);
+    void Attack();
     void Jump();
     bool IsGrounded();
+
+ 
 }

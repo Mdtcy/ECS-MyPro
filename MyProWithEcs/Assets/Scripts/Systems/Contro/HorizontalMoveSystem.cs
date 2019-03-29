@@ -20,7 +20,7 @@ public class HorizontalMoveSystem
         {
             var go = e.view.IViewControllerInstance;
             var _input = _contexts.meta.inputService.instance;      
-            go.MoveHorizontal(new Vector3(_input.GetHorizontal(), 0, 0));
+            go.MoveHorizontal(_input.GetHorizontal());
 
             e.RemoveHorizontal();
         }
@@ -28,11 +28,11 @@ public class HorizontalMoveSystem
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasHorizontal;
+        return entity.hasHorizontal && entity.hasView;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-       return context.CreateCollector(GameMatcher.Horizontal);
+       return context.CreateCollector(GameMatcher.AllOf(GameMatcher.Horizontal,GameMatcher.View));
     }
 }

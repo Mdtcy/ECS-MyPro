@@ -16,6 +16,6 @@ public class IntializeSnakeSystem : IInitializeSystem
         _entity.isEnemy = true;
         _entity.AddSprite("Snake");
         _entity.AddHP(100);
-
+        _entity.AddAttackSpeed(2);
     }
 }

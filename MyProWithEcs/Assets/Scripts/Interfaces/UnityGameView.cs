@@ -19,26 +19,40 @@ public class UnityGameView : MonoBehaviour, IViewController
     private LayerMask WhatIsGround;
     private Rigidbody2D _groundRigidBody;
     private Rigidbody2D _rigBody;
-    private bool  faceRight=true;
+    private bool faceRight=true;//1 右,-1左
     private void Awake()
     {
         WhatIsGround = LayerMask.GetMask("Ground");
         GroundCheck = transform.Find("GroundCheck");
         _rigBody = gameObject.GetComponent<Rigidbody2D>();
+        
     }
-    public void MoveHorizontal(Vector3 newPosition)
+
+    public void Attack()
+    {
+        if(gameObject.GetComponent<IAttack>()!=null)
+        {
+            gameObject.GetComponent<IAttack>().Attack();
+        }
+    }
+    public void MoveHorizontal(float direction)
     {
         //辅助跳跃判断
-        if(IsGrounded())
+        if (GroundCheck!=null)
         {
+           
+            if (IsGrounded())
+            {
 
-            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
+                _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
+            }
         }
+        
 
 
-        //this.gameObject.transform.Translate(newPosition * Time.deltaTime*_entity.speed.speed);
+       
         Rigidbody2D _rigBody = this.gameObject.GetComponent<Rigidbody2D>();
-        _rigBody.velocity= new Vector3(newPosition.x*_entity.speed.speed, _rigBody.velocity.y, 0);
+        _rigBody.velocity= new Vector2(direction * _entity.speed.speed, _rigBody.velocity.y);
        
         if(faceRight && _rigBody.velocity.x<0)
         {
@@ -55,7 +69,7 @@ public class UnityGameView : MonoBehaviour, IViewController
         }
     }
     
-
+    
     public void DestroyView()
     {
         Object.Destroy(this);
@@ -74,10 +88,12 @@ public class UnityGameView : MonoBehaviour, IViewController
         
         if(IsGrounded())
         {
+            
             _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
             //_rigBody.AddForce(Vector2.up * _entity.jumpForce.jumpForceValue);
             _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
             _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes,_entity.jumpTimes.JumpTimes - 1);
+
         }
         else if(_entity.jumpTimes.JumpTimes>0)
         {
@@ -92,6 +108,7 @@ public class UnityGameView : MonoBehaviour, IViewController
     {
         
         var _collider = Physics2D.OverlapCircle(GroundCheck.position, GROUND_CHECK_RADIUS, WhatIsGround);
+
         if (_collider != null)
         {
             _groundRigidBody = _collider.gameObject.GetComponent<Rigidbody2D>();
@@ -109,4 +126,6 @@ public class UnityGameView : MonoBehaviour, IViewController
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+    
 }

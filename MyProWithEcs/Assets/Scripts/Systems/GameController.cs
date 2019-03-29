@@ -13,16 +13,11 @@ public class GameController : MonoBehaviour
 
         var contexts = Contexts.sharedInstance;
 
-
-
-
-
         //var entity = contexts.game.CreateEntity();
         //entity.AddGameSetUp(gameSetUp);
         //和下面这句一样
         //contexts.game.SetGameSetup(gameSetUp);
-       // contexts.input.SetInput(0f, 0f);
-        //contexts.input.SetJumpButton(false);
+       
 
         _systems = CreateSystems(contexts);
         
@@ -60,7 +55,10 @@ public class GameController : MonoBehaviour
             .Add(new IntializeSnakeSystem(contexts))
             .Add(new IntializePlayerSystem(contexts))
 
+            .Add(new TimerSystem(contexts))
+            .Add(new EnemyAiSystem(contexts))
             .Add(new AttackSystem(contexts))
             .Add(new ControSystems(contexts));
+        
     }
 }
