@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Administrator\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_MyProWithEcs.-1682334128.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Administrator\Documents\GitHub\ECS-MyPro\MyProWithEcs" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CameraFollow.cs" t="Include" />
+        <e p="Cinemachine" t="Include">
+          <e p="Base" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Editors" t="Include">
+                <e p="CinemachineBasicMultiChannelPerlinEditor.cs" t="Include" />
+                <e p="CinemachineBlenderSettingsEditor.cs" t="Include" />
+                <e p="CinemachineBlendListCameraEditor.cs" t="Include" />
+                <e p="CinemachineBrainEditor.cs" t="Include" />
+                <e p="CinemachineClearShotEditor.cs" t="Include" />
+                <e p="CinemachineColliderEditor.cs" t="Include" />
+                <e p="CinemachineComposerEditor.cs" t="Include" />
+                <e p="CinemachineConfinerEditor.cs" t="Include" />
+                <e p="CinemachineExternalCameraEditor.cs" t="Include" />
+                <e p="CinemachineFramingTransposerEditor.cs" t="Include" />
+                <e p="CinemachineFreeLookEditor.cs" t="Include" />
+                <e p="CinemachineGroupComposerEditor.cs" t="Include" />
+                <e p="CinemachineHardLockToTargetEditor.cs" t="Include" />
+                <e p="CinemachineHardLookAtEditor.cs" t="Include" />
+                <e p="CinemachineMixingCameraEditor.cs" t="Include" />
+                <e p="CinemachineOrbitalTransposerEditor.cs" t="Include" />
+                <e p="CinemachinePathEditor.cs" t="Include" />
+                <e p="CinemachinePOVEditor.cs" t="Include" />
+                <e p="CinemachineScreenComposerGuides.cs" t="Include" />
+                <e p="CinemachineSmoothPathEditor.cs" t="Include" />
+                <e p="CinemachineStateDrivenCameraEditor.cs" t="Include" />
+                <e p="CinemachineTargetGroupEditor.cs" t="Include" />
+                <e p="CinemachineTrackedDollyEditor.cs" t="Include" />
+                <e p="CinemachineTransposerEditor.cs" t="Include" />
+                <e p="CinemachineVirtualCameraBaseEditor.cs" t="Include" />
+                <e p="CinemachineVirtualCameraEditor.cs" t="Include" />
+              </e>
+              <e p="Menus" t="Include">
+                <e p="CinemachineMenu.cs" t="Include" />
+              </e>
+              <e p="PropertyDrawers" t="Include">
+                <e p="CinemachineBlendDefinitionPropertyDrawer.cs" t="Include" />
+                <e p="CinemachineTagFieldPropertyDrawer.cs" t="Include" />
+                <e p="GetSetDrawer.cs" t="Include" />
+                <e p="LensSettingsPropertyDrawer.cs" t="Include" />
+                <e p="MinDrawer.cs" t="Include" />
+              </e>
+              <e p="Utility" t="Include">
+                <e p="BaseEditor.cs" t="Include" />
+                <e p="EmbeddedAssetHelpers.cs" t="Include" />
+                <e p="SaveDuringPlay.cs" t="Include" />
+                <e p="ScriptableObjectUtility.cs" t="Include" />
+                <e p="SerializedPropertyHelper.cs" t="Include" />
+              </e>
+              <e p="Windows" t="Include">
+                <e p="AboutWindow.cs" t="Include" />
+                <e p="CinemachineColliderPrefs.cs" t="Include" />
+                <e p="CinemachineSettings.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="Behaviours" t="Include">
+                <e p="CinemachineBlendListCamera.cs" t="Include" />
+                <e p="CinemachineBrain.cs" t="Include" />
+                <e p="CinemachineClearShot.cs" t="Include" />
+                <e p="CinemachineCollider.cs" t="Include" />
+                <e p="CinemachineConfiner.cs" t="Include" />
+                <e p="CinemachineDollyCart.cs" t="Include" />
+                <e p="CinemachineExternalCamera.cs" t="Include" />
+                <e p="CinemachineFollowZoom.cs" t="Include" />
+                <e p="CinemachineFreeLook.cs" t="Include" />
+                <e p="CinemachineMixingCamera.cs" t="Include" />
+                <e p="CinemachinePath.cs" t="Include" />
+                <e p="CinemachinePipeline.cs" t="Include" />
+                <e p="CinemachineSmoother.cs" t="Include" />
+                <e p="CinemachineSmoothPath.cs" t="Include" />
+                <e p="CinemachineStateDrivenCamera.cs" t="Include" />
+                <e p="CinemachineTargetGroup.cs" t="Include" />
+                <e p="CinemachineVirtualCamera.cs" t="Include" />
+              </e>
+              <e p="Components" t="Include">
+                <e p="CinemachineBasicMultiChannelPerlin.cs" t="Include" />
+                <e p="CinemachineComposer.cs" t="Include" />
+                <e p="CinemachineFramingTransposer.cs" t="Include" />
+                <e p="CinemachineGroupComposer.cs" t="Include" />
+                <e p="CinemachineHardLockToTarget.cs" t="Include" />
+                <e p="CinemachineHardLookAt.cs" t="Include" />
+                <e p="CinemachineOrbitalTransposer.cs" t="Include" />
+                <e p="CinemachinePOV.cs" t="Include" />
+                <e p="CinemachineSameAsFollowObject.cs" t="Include" />
+                <e p="CinemachineTrackedDolly.cs" t="Include" />
+                <e p="CinemachineTransposer.cs" t="Include" />
+              </e>
+              <e p="Core" t="Include">
+                <e p="AxisState.cs" t="Include" />
+                <e p="CameraState.cs" t="Include" />
+                <e p="CinemachineBlend.cs" t="Include" />
+                <e p="CinemachineBlenderSettings.cs" t="Include" />
+                <e p="CinemachineComponentBase.cs" t="Include" />
+                <e p="CinemachineCore.cs" t="Include" />
+                <e p="CinemachineDebugLogger.cs" t="Include" />
+                <e p="CinemachineExtension.cs" t="Include" />
+                <e p="CinemachinePathBase.cs" t="Include" />
+                <e p="CinemachinePropertyAttribute.cs" t="Include" />
+                <e p="CinemachineVirtualCameraBase.cs" t="Include" />
+                <e p="GaussianFilter.cs" t="Include" />
+                <e p="ICinemachineCamera.cs" t="Include" />
+                <e p="ICinemachineComponent.cs" t="Include" />
+                <e p="LensSettings.cs" t="Include" />
+                <e p="NoiseSettings.cs" t="Include" />
+                <e p="Predictor.cs" t="Include" />
+                <e p="ReflectionHelpers.cs" t="Include" />
+                <e p="SplineHelpers.cs" t="Include" />
+                <e p="UnityVectorExtensions.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="PostFX" t="Include">
+            <e p="CinemachinePostFX.cs" t="Include" />
+            <e p="CinemachinePostProcessing.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="CinemachinePostProcessingEditor.cs" t="Include" />
+              <e p="PostFXAutoImport.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ReleaseNotes.txt" t="Include" />
+          <e p="Timeline" t="Include">
+            <e p="CinemachineMixer.cs" t="Include" />
+            <e p="CinemachineShot.cs" t="Include" />
+            <e p="CinemachineTrack.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="CinemachineShotEditor.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="DesperateDevs" t="Include">
+          <e p="Compile.cs" t="Include" />
+        </e>
+        <e p="Entitas" t="Include">
+          <e p="Entitas.xml" t="Include" />
+        </e>
+        <e p="Generated" t="Include">
+          <e p="Components" t="Include">
+            <e p="GameSetupComponent.cs" t="Include" />
+          </e>
+          <e p="Contexts.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="Components" t="Include">
+              <e p="PositionListenerComponent.cs" t="Include" />
+            </e>
+            <e p="GameEventSystems.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IPositionListener.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="PositionEventSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Feature.cs" t="Include" />
+          <e p="Game" t="Include">
+            <e p="Components" t="Include">
+              <e p="GameATKComponent.cs" t="Include" />
+              <e p="GameAttackComponent.cs" t="Include" />
+              <e p="GameAttackSpeedComponent.cs" t="Include" />
+              <e p="GameDirectionComponent.cs" t="Include" />
+              <e p="GameEnemyComponent.cs" t="Include" />
+              <e p="GameFindPlayerComponent.cs" t="Include" />
+              <e p="GameGameSetupComponent.cs" t="Include" />
+              <e p="GameHorizontalComponent.cs" t="Include" />
+              <e p="GameHPComponent.cs" t="Include" />
+              <e p="GameJumpComponent.cs" t="Include" />
+              <e p="GameJumpForceComponent.cs" t="Include" />
+              <e p="GameJumpSpeedComponent.cs" t="Include" />
+              <e p="GameJumpTimesComponent.cs" t="Include" />
+              <e p="GameMovementComponent.cs" t="Include" />
+              <e p="GameMovingComponent.cs" t="Include" />
+              <e p="GamePlayerComponent.cs" t="Include" />
+              <e p="GamePositionComponent.cs" t="Include" />
+              <e p="GamePositionListenerComponent.cs" t="Include" />
+              <e p="GameResourceComponent.cs" t="Include" />
+              <e p="GameSpeedComponent.cs" t="Include" />
+              <e p="GameSpriteComponent.cs" t="Include" />
+              <e p="GameTimerComponent.cs" t="Include" />
+              <e p="GamettttComponent.cs" t="Include" />
+              <e p="GameVelocityComponent.cs" t="Include" />
+              <e p="GameViewComponent.cs" t="Include" />
+            </e>
+            <e p="GameAttribute.cs" t="Include" />
+            <e p="GameComponentsLookup.cs" t="Include" />
+            <e p="GameContext.cs" t="Include" />
+            <e p="GameEntity.cs" t="Include" />
+            <e p="GameMatcher.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="InputAttribute.cs" t="Include" />
+            <e p="InputComponentsLookup.cs" t="Include" />
+            <e p="InputContext.cs" t="Include" />
+            <e p="InputEntity.cs" t="Include" />
+            <e p="InputMatcher.cs" t="Include" />
+          </e>
+          <e p="Meta" t="Include">
+            <e p="Components" t="Include">
+              <e p="MetaInputServiceComponent.cs" t="Include" />
+              <e p="MetaViewServiceComponent.cs" t="Include" />
+            </e>
+            <e p="MetaAttribute.cs" t="Include" />
+            <e p="MetaComponentsLookup.cs" t="Include" />
+            <e p="MetaContext.cs" t="Include" />
+            <e p="MetaEntity.cs" t="Include" />
+            <e p="MetaMatcher.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="UIAttribute.cs" t="Include" />
+            <e p="UIComponentsLookup.cs" t="Include" />
+            <e p="UIContext.cs" t="Include" />
+            <e p="UIEntity.cs" t="Include" />
+            <e p="UIMatcher.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Components" t="Include">
+            <e p="ATKComponent.cs" t="Include" />
+            <e p="AttackComponent.cs" t="Include" />
+            <e p="AttackSpeedComponent.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="EnemyComponent.cs" t="Include" />
+              <e p="FindPlayerComponent.cs" t="Include" />
+            </e>
+            <e p="HorizontalMove" t="Include">
+              <e p="DirectionComponent.cs" t="Include" />
+              <e p="MovingComponent.cs" t="Include" />
+            </e>
+            <e p="HPComponent.cs" t="Include" />
+            <e p="Input" t="Include">
+              <e p="HorizontalComponent.cs" t="Include" />
+              <e p="JumpComponent.cs" t="Include" />
+            </e>
+            <e p="JumpForceComponent.cs" t="Include" />
+            <e p="JumpSpeedComponent.cs" t="Include" />
+            <e p="JumpTimesComponent.cs" t="Include" />
+            <e p="MovementComponent.cs" t="Include" />
+            <e p="PlayerComponent.cs" t="Include" />
+            <e p="PositionComponent.cs" t="Include" />
+            <e p="ResourceComponent.cs" t="Include" />
+            <e p="Service" t="Include">
+              <e p="InputServiceComponent.cs" t="Include" />
+              <e p="ViewServiceComponent.cs" t="Include" />
+            </e>
+            <e p="SpeedComponent.cs" t="Include" />
+            <e p="SpriteComponent.cs" t="Include" />
+            <e p="TimerComponent.cs" t="Include" />
+            <e p="ttttComponent.cs" t="Include" />
+            <e p="VelocityComponent.cs" t="Include" />
+            <e p="ViewComponent.cs" t="Include" />
+          </e>
+          <e p="GameSetup.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IEventListener.cs" t="Include" />
+            <e p="IViewController.cs" t="Include" />
+            <e p="PositionListener.cs" t="Include" />
+            <e p="Service" t="Include">
+              <e p="IAttack.cs" t="Include" />
+              <e p="IInputService.cs" t="Include" />
+              <e p="IViewService.cs" t="Include" />
+              <e p="PlayerAttackTest.cs" t="Include" />
+              <e p="SnakeAttackTest.cs" t="Include" />
+              <e p="UnityInputService.cs" t="Include" />
+              <e p="UnityViewService.cs" t="Include" />
+            </e>
+            <e p="UnityGameView.cs" t="Include" />
+          </e>
+          <e p="Services.cs" t="Include" />
+          <e p="Systems" t="Include">
+            <e p="AddViewSystem.cs" t="Include" />
+            <e p="AttackSystem.cs" t="Include" />
+            <e p="Contro" t="Include">
+              <e p="ControSystems.cs" t="Include" />
+              <e p="HorizontalMoveSystem.cs" t="Include" />
+              <e p="JumpTSystem.cs" t="Include" />
+            </e>
+            <e p="EnemyAiSystem.cs" t="Include" />
+            <e p="GameController.cs" t="Include" />
+            <e p="HorizontalMove" t="Include">
+              <e p="HorizontalMoveTSystem.cs" t="Include" />
+            </e>
+            <e p="Input" t="Include">
+              <e p="AttackInputSystem.cs" t="Include" />
+              <e p="DirectionInputSystem.cs" t="Include" />
+              <e p="HorizontalInputSystem.cs" t="Include" />
+              <e p="InputSystems.cs" t="Include" />
+              <e p="JumpInputSystem.cs" t="Include" />
+            </e>
+            <e p="InputSystem.cs" t="Include" />
+            <e p="IntializePlayerSystem.cs" t="Include" />
+            <e p="Service" t="Include">
+              <e p="RegisterInputServiceSystem.cs" t="Include" />
+              <e p="RegisterViewServiceSystem.cs" t="Include" />
+              <e p="ServiceRegistrationSystems.cs" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="IntializeSnakeSystem.cs" t="Include" />
+            </e>
+            <e p="TimerSystem.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Third-Party Notices.txt" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="MyProWithEcs.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
