@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGameobject: {fileID: 2274113754932345519, guid: b12c8461d38401c4f98265938f71d0ea,
     type: 3}
+  AttackObject: {fileID: 6569132330177883734, guid: dacf50ba1594016498b1aae2cf4ab5af,
+    type: 3}

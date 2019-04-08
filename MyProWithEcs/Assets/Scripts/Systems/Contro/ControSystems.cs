@@ -6,7 +6,7 @@ public class ControSystems : Feature
     public ControSystems(Contexts contexts) : base("ControSystems Systems")
     {
         
-        Add(new JumpTSystem(contexts));
-        Add(new HorizontalMoveTSystem(contexts));
+        //Add(new JumpTSystem(contexts));
+        //Add(new HorizontalMoveTSystem(contexts));
     }
 }

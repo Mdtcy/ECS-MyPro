@@ -7,6 +7,11 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Asset" t="Include">
+          <e p="Gothicvania Cemetery Artwork" t="Include">
+            <e p="about.txt" t="Include" />
+          </e>
+        </e>
         <e p="CameraFollow.cs" t="Include" />
         <e p="Cinemachine" t="Include">
           <e p="Base" t="Include">
@@ -140,6 +145,7 @@
         <e p="DesperateDevs" t="Include">
           <e p="Compile.cs" t="Include" />
         </e>
+        <e p="detect.cs" t="Include" />
         <e p="Entitas" t="Include">
           <e p="Entitas.xml" t="Include" />
         </e>
@@ -166,12 +172,17 @@
               <e p="GameATKComponent.cs" t="Include" />
               <e p="GameAttackComponent.cs" t="Include" />
               <e p="GameAttackSpeedComponent.cs" t="Include" />
+              <e p="GameCanAttackComponent.cs" t="Include" />
+              <e p="GameCanMoveComponent.cs" t="Include" />
+              <e p="GameDamageComponent.cs" t="Include" />
               <e p="GameDirectionComponent.cs" t="Include" />
               <e p="GameEnemyComponent.cs" t="Include" />
+              <e p="GameEnemyMoveTimerComponent.cs" t="Include" />
+              <e p="GameFaceRightComponent.cs" t="Include" />
               <e p="GameFindPlayerComponent.cs" t="Include" />
-              <e p="GameGameSetupComponent.cs" t="Include" />
-              <e p="GameHorizontalComponent.cs" t="Include" />
+              <e p="GameFreezeComponent.cs" t="Include" />
               <e p="GameHPComponent.cs" t="Include" />
+              <e p="GameHPUiComponent.cs" t="Include" />
               <e p="GameJumpComponent.cs" t="Include" />
               <e p="GameJumpForceComponent.cs" t="Include" />
               <e p="GameJumpSpeedComponent.cs" t="Include" />
@@ -187,6 +198,7 @@
               <e p="GameTimerComponent.cs" t="Include" />
               <e p="GamettttComponent.cs" t="Include" />
               <e p="GameVelocityComponent.cs" t="Include" />
+              <e p="GameVelocityXComponent.cs" t="Include" />
               <e p="GameViewComponent.cs" t="Include" />
             </e>
             <e p="GameAttribute.cs" t="Include" />
@@ -196,6 +208,13 @@
             <e p="GameMatcher.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
+            <e p="Components" t="Include">
+              <e p="InputFireInputComponent.cs" t="Include" />
+              <e p="InputHorizontalComponent.cs" t="Include" />
+              <e p="InputInputManagerComponent.cs" t="Include" />
+              <e p="InputJumpInputComponent.cs" t="Include" />
+              <e p="InputVerticalComponent.cs" t="Include" />
+            </e>
             <e p="InputAttribute.cs" t="Include" />
             <e p="InputComponentsLookup.cs" t="Include" />
             <e p="InputContext.cs" t="Include" />
@@ -204,6 +223,9 @@
           </e>
           <e p="Meta" t="Include">
             <e p="Components" t="Include">
+              <e p="MetaEnemyCanAttackDistanceComponent.cs" t="Include" />
+              <e p="MetaEnemyFindDistanceComponent.cs" t="Include" />
+              <e p="MetaGameSetupComponent.cs" t="Include" />
               <e p="MetaInputServiceComponent.cs" t="Include" />
               <e p="MetaViewServiceComponent.cs" t="Include" />
             </e>
@@ -226,19 +248,31 @@
             <e p="ATKComponent.cs" t="Include" />
             <e p="AttackComponent.cs" t="Include" />
             <e p="AttackSpeedComponent.cs" t="Include" />
+            <e p="CanAttackComponent.cs" t="Include" />
+            <e p="CanMoveComponent.cs" t="Include" />
+            <e p="DamageComponent.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemyComponent.cs" t="Include" />
               <e p="FindPlayerComponent.cs" t="Include" />
             </e>
+            <e p="EnemyCanAttackDistanceComponent.cs" t="Include" />
+            <e p="EnemyFindDistanceComponent.cs" t="Include" />
+            <e p="EnemyMoveTimerComponent.cs" t="Include" />
+            <e p="FaceRightComponent.cs" t="Include" />
+            <e p="FreezeComponent.cs" t="Include" />
             <e p="HorizontalMove" t="Include">
               <e p="DirectionComponent.cs" t="Include" />
               <e p="MovingComponent.cs" t="Include" />
             </e>
             <e p="HPComponent.cs" t="Include" />
             <e p="Input" t="Include">
+              <e p="FireInputComponent.cs" t="Include" />
               <e p="HorizontalComponent.cs" t="Include" />
-              <e p="JumpComponent.cs" t="Include" />
+              <e p="JumpInputComponent.cs" t="Include" />
+              <e p="VerticalComponent.cs" t="Include" />
             </e>
+            <e p="InputManagerComponent.cs" t="Include" />
+            <e p="JumpComponent.cs" t="Include" />
             <e p="JumpForceComponent.cs" t="Include" />
             <e p="JumpSpeedComponent.cs" t="Include" />
             <e p="JumpTimesComponent.cs" t="Include" />
@@ -254,9 +288,18 @@
             <e p="SpriteComponent.cs" t="Include" />
             <e p="TimerComponent.cs" t="Include" />
             <e p="ttttComponent.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="HPUiComponent.cs" t="Include" />
+            </e>
             <e p="VelocityComponent.cs" t="Include" />
+            <e p="VelocityXComponent.cs" t="Include" />
             <e p="ViewComponent.cs" t="Include" />
           </e>
+          <e p="CreatedObjects" t="Include">
+            <e p="AttackObject.cs" t="Include" />
+            <e p="CreatedObject.cs" t="Include" />
+          </e>
+          <e p="GameController.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IEventListener.cs" t="Include" />
@@ -271,7 +314,7 @@
               <e p="UnityInputService.cs" t="Include" />
               <e p="UnityViewService.cs" t="Include" />
             </e>
-            <e p="UnityGameView.cs" t="Include" />
+            <e p="UnityGameViewController.cs" t="Include" />
           </e>
           <e p="Services.cs" t="Include" />
           <e p="Systems" t="Include">
@@ -281,11 +324,17 @@
               <e p="ControSystems.cs" t="Include" />
               <e p="HorizontalMoveSystem.cs" t="Include" />
               <e p="JumpTSystem.cs" t="Include" />
+              <e p="PlayerControSystem.cs" t="Include" />
             </e>
-            <e p="EnemyAiSystem.cs" t="Include" />
-            <e p="GameController.cs" t="Include" />
+            <e p="DmageSystem.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="EnemyAiSystem.cs" t="Include" />
+              <e p="EnemyMoveSystem.cs" t="Include" />
+            </e>
+            <e p="FreezeSystem.cs" t="Include" />
             <e p="HorizontalMove" t="Include">
               <e p="HorizontalMoveTSystem.cs" t="Include" />
+              <e p="VelocityXSystem.cs" t="Include" />
             </e>
             <e p="Input" t="Include">
               <e p="AttackInputSystem.cs" t="Include" />
@@ -295,19 +344,25 @@
               <e p="JumpInputSystem.cs" t="Include" />
             </e>
             <e p="InputSystem.cs" t="Include" />
-            <e p="IntializePlayerSystem.cs" t="Include" />
             <e p="Service" t="Include">
               <e p="RegisterInputServiceSystem.cs" t="Include" />
               <e p="RegisterViewServiceSystem.cs" t="Include" />
               <e p="ServiceRegistrationSystems.cs" t="Include" />
             </e>
             <e p="Tests" t="Include">
+              <e p="IntializePlayerSystem.cs" t="Include" />
               <e p="IntializeSnakeSystem.cs" t="Include" />
             </e>
             <e p="TimerSystem.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="HPUiSystem.cs" t="Include" />
+            </e>
           </e>
         </e>
+        <e p="si.cs" t="Include" />
+        <e p="testCollision.cs" t="Include" />
         <e p="Third-Party Notices.txt" t="Include" />
+        <e p="UiIni.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="MyProWithEcs.sln" t="IncludeFlat" />

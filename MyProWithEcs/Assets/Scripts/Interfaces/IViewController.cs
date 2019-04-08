@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
@@ -10,7 +11,13 @@ public interface IViewController
 {
     Vector3 Position { get; set; }
     bool Active { get; set; }
+
+    Animator animator { get;  }
+    float VelocityX { get; set; }
+    Transform HpUiTransform { get; }
     void InitializeView(Contexts contexts, IEntity Entity);
+    
+    
     void DestroyView();
 
     void MoveHorizontal(float direction);
@@ -19,6 +26,8 @@ public interface IViewController
     void Attack();
     void Jump();
     bool IsGrounded();
+    void Flip();
 
- 
+    void CreatGameObject( String name);
+
 }

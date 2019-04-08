@@ -8,14 +8,22 @@ public class TimerSystem : IExecuteSystem
     public TimerSystem(Contexts contexts)
     {
         
-        _timers = contexts.game.GetGroup(GameMatcher.Timer);
+        _timers = contexts.game.GetGroup(GameMatcher.AnyOf(GameMatcher.Timer,GameMatcher.EnemyMoveTimer));
     }
 
     public void Execute()
     {
         foreach (GameEntity e in _timers.GetEntities())
         {
-            e.timer.value = e.timer.value - Time.deltaTime;
+            if (e.hasTimer)
+            {
+                e.timer.value = e.timer.value - Time.deltaTime;
+            }
+            else if (e.hasEnemyMoveTimer)
+            {
+                e.enemyMoveTimer.value = e.enemyMoveTimer.value - Time.deltaTime;
+            }
+            
         }
     }
 }

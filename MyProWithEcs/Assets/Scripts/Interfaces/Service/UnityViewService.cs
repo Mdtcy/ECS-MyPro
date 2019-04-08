@@ -28,4 +28,10 @@ public class UnityViewService : IViewService
             
         }
     }
+
+//    public void Flip(GameEntity entity)
+//    {
+//        entity.view.IViewControllerInstance.Flip();
+//       
+//    }
 }

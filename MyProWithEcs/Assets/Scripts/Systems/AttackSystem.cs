@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DesperateDevs.Utils;
 using UnityEngine;
 using Entitas;
 using Entitas.Unity;
@@ -61,21 +62,23 @@ public class AttackSystem : IExecuteSystem
     {
         foreach (GameEntity e in _attacks.GetEntities())
         {
-            e.isMoving = false;
-            var go = e.view.IViewControllerInstance;
             
+            e.isMoving = false;
+             
+            var go = e.view.IViewControllerInstance;
             if(!e.hasTimer)
             {
-
+                go.Attack();
                 e.AddTimer(e.attackSpeed.value);
             }
 
             if (e.timer.value < 0)
             {
-                go.Attack();
-                e.isAttack = false;
+                
+                
                 e.isMoving = true;
                 e.RemoveTimer();
+                e.isAttack = false;
             }
 
         }

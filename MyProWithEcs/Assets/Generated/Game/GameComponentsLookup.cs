@@ -11,41 +11,52 @@ public static class GameComponentsLookup {
     public const int ATK = 0;
     public const int Attack = 1;
     public const int AttackSpeed = 2;
-    public const int Direction = 3;
-    public const int Enemy = 4;
-    public const int FindPlayer = 5;
-    public const int GameSetup = 6;
-    public const int Horizontal = 7;
-    public const int HP = 8;
-    public const int Jump = 9;
-    public const int JumpForce = 10;
-    public const int JumpSpeed = 11;
-    public const int JumpTimes = 12;
-    public const int Movement = 13;
-    public const int Moving = 14;
-    public const int Player = 15;
-    public const int Position = 16;
-    public const int PositionListener = 17;
-    public const int Resource = 18;
-    public const int Speed = 19;
-    public const int Sprite = 20;
-    public const int Timer = 21;
-    public const int tttt = 22;
-    public const int Velocity = 23;
-    public const int View = 24;
+    public const int CanAttack = 3;
+    public const int CanMove = 4;
+    public const int Damage = 5;
+    public const int Direction = 6;
+    public const int Enemy = 7;
+    public const int EnemyMoveTimer = 8;
+    public const int FaceRight = 9;
+    public const int FindPlayer = 10;
+    public const int Freeze = 11;
+    public const int HP = 12;
+    public const int HPUi = 13;
+    public const int Jump = 14;
+    public const int JumpForce = 15;
+    public const int JumpSpeed = 16;
+    public const int JumpTimes = 17;
+    public const int Movement = 18;
+    public const int Moving = 19;
+    public const int Player = 20;
+    public const int Position = 21;
+    public const int PositionListener = 22;
+    public const int Resource = 23;
+    public const int Speed = 24;
+    public const int Sprite = 25;
+    public const int Timer = 26;
+    public const int tttt = 27;
+    public const int Velocity = 28;
+    public const int VelocityX = 29;
+    public const int View = 30;
 
-    public const int TotalComponents = 25;
+    public const int TotalComponents = 31;
 
     public static readonly string[] componentNames = {
         "ATK",
         "Attack",
         "AttackSpeed",
+        "CanAttack",
+        "CanMove",
+        "Damage",
         "Direction",
         "Enemy",
+        "EnemyMoveTimer",
+        "FaceRight",
         "FindPlayer",
-        "GameSetup",
-        "Horizontal",
+        "Freeze",
         "HP",
+        "HPUi",
         "Jump",
         "JumpForce",
         "JumpSpeed",
@@ -61,6 +72,7 @@ public static class GameComponentsLookup {
         "Timer",
         "tttt",
         "Velocity",
+        "VelocityX",
         "View"
     };
 
@@ -68,12 +80,17 @@ public static class GameComponentsLookup {
         typeof(ATKComponent),
         typeof(AttackComponent),
         typeof(AttackSpeedComponent),
+        typeof(CanAttackComponent),
+        typeof(CanMoveComponent),
+        typeof(DamageComponent),
         typeof(Direction),
         typeof(EnemyComponent),
+        typeof(EnemyMoveTimerComponent),
+        typeof(FaceRightComponent),
         typeof(FindPlayerComponent),
-        typeof(GameSetupComponent),
-        typeof(HorizontalComponent),
+        typeof(FreezeComponent),
         typeof(HPComponent),
+        typeof(HPUiComponent),
         typeof(JumpComponent),
         typeof(JumpForceComponent),
         typeof(JumpSpeedComponent),
@@ -89,6 +106,7 @@ public static class GameComponentsLookup {
         typeof(TimerComponent),
         typeof(ttttComponent),
         typeof(VelocityComponent),
+        typeof(VelocityXComponent),
         typeof(ViewComponent)
     };
 }

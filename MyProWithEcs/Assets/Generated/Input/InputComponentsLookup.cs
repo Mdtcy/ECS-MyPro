@@ -8,15 +8,27 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int FireInput = 0;
+    public const int Horizontal = 1;
+    public const int InputManager = 2;
+    public const int JumpInput = 3;
+    public const int Vertical = 4;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-
+        "FireInput",
+        "Horizontal",
+        "InputManager",
+        "JumpInput",
+        "Vertical"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(FireInputComponent),
+        typeof(HorizontalComponent),
+        typeof(InputManagerComponent),
+        typeof(JumpInputComponent),
+        typeof(VerticalComponent)
     };
 }

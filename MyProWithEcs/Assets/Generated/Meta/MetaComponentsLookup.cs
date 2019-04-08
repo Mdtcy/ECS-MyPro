@@ -8,17 +8,26 @@
 //------------------------------------------------------------------------------
 public static class MetaComponentsLookup {
 
-    public const int InputService = 0;
-    public const int ViewService = 1;
+    public const int EnemyCanAttackDistance = 0;
+    public const int EnemyFindDistance = 1;
+    public const int GameSetup = 2;
+    public const int InputService = 3;
+    public const int ViewService = 4;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
+        "EnemyCanAttackDistance",
+        "EnemyFindDistance",
+        "GameSetup",
         "InputService",
         "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(EnemyCanAttackDistanceComponent),
+        typeof(EnemyFindDistanceComponent),
+        typeof(GameSetupComponent),
         typeof(InputServiceComponent),
         typeof(ViewServiceComponent)
     };

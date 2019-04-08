@@ -11,4 +11,6 @@ public interface IViewService
         Contexts contexts,
         GameEntity entity,
         string assetName);
+
+    //void Flip(GameEntity entity);
 }

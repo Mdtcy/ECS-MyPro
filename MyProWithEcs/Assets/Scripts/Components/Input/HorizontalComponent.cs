@@ -4,7 +4,7 @@ using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
-[Game]
+[Input,Unique]
 public class HorizontalComponent: IComponent
 {
     public float value;

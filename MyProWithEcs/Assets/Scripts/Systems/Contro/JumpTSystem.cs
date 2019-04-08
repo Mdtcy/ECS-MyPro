@@ -24,11 +24,11 @@ public class JumpTSystem
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isJump && entity.isPlayer;
+        return entity.isJump;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.Player,GameMatcher.Jump));
+        return context.CreateCollector(GameMatcher.Jump);
     }
 }

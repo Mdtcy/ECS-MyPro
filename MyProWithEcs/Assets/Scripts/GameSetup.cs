@@ -4,8 +4,9 @@ using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 [CreateAssetMenu]
-[Game, Unique]
+[Meta, Unique]
 public class GameSetup : ScriptableObject
 {
     public GameObject playerGameobject;
+    public CreatedObject AttackObject;
 }

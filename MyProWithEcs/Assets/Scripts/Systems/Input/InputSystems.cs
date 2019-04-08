@@ -6,7 +6,7 @@ public class InputSystems : Feature
     public InputSystems(Contexts contexts) : base("InputSystems Systems")
     {
         Add(new DirectionInputSystem(contexts));
-        Add(new JumpInputSystem(contexts));
+        //Add(new JumpInputSystem(contexts));
         Add(new AttackInputSystem(contexts));
     }
 }
