@@ -171,7 +171,9 @@
             <e p="Components" t="Include">
               <e p="GameATKComponent.cs" t="Include" />
               <e p="GameAttackComponent.cs" t="Include" />
+              <e p="GameAttackRangeComponent.cs" t="Include" />
               <e p="GameAttackSpeedComponent.cs" t="Include" />
+              <e p="GameAttackTimerComponent.cs" t="Include" />
               <e p="GameCanAttackComponent.cs" t="Include" />
               <e p="GameCanMoveComponent.cs" t="Include" />
               <e p="GameDamageComponent.cs" t="Include" />
@@ -180,7 +182,9 @@
               <e p="GameEnemyMoveTimerComponent.cs" t="Include" />
               <e p="GameFaceRightComponent.cs" t="Include" />
               <e p="GameFindPlayerComponent.cs" t="Include" />
+              <e p="GameFlipTimerComponent.cs" t="Include" />
               <e p="GameFreezeComponent.cs" t="Include" />
+              <e p="GameFreezeTimerComponent.cs" t="Include" />
               <e p="GameHPComponent.cs" t="Include" />
               <e p="GameHPUiComponent.cs" t="Include" />
               <e p="GameJumpComponent.cs" t="Include" />
@@ -190,6 +194,7 @@
               <e p="GameMovementComponent.cs" t="Include" />
               <e p="GameMovingComponent.cs" t="Include" />
               <e p="GamePlayerComponent.cs" t="Include" />
+              <e p="GamePointToPlayerComponent.cs" t="Include" />
               <e p="GamePositionComponent.cs" t="Include" />
               <e p="GamePositionListenerComponent.cs" t="Include" />
               <e p="GameResourceComponent.cs" t="Include" />
@@ -223,7 +228,6 @@
           </e>
           <e p="Meta" t="Include">
             <e p="Components" t="Include">
-              <e p="MetaEnemyCanAttackDistanceComponent.cs" t="Include" />
               <e p="MetaEnemyFindDistanceComponent.cs" t="Include" />
               <e p="MetaGameSetupComponent.cs" t="Include" />
               <e p="MetaInputServiceComponent.cs" t="Include" />
@@ -247,7 +251,9 @@
           <e p="Components" t="Include">
             <e p="ATKComponent.cs" t="Include" />
             <e p="AttackComponent.cs" t="Include" />
+            <e p="AttackRangeComponent.cs" t="Include" />
             <e p="AttackSpeedComponent.cs" t="Include" />
+            <e p="AttackTimerComponent.cs" t="Include" />
             <e p="CanAttackComponent.cs" t="Include" />
             <e p="CanMoveComponent.cs" t="Include" />
             <e p="DamageComponent.cs" t="Include" />
@@ -259,7 +265,9 @@
             <e p="EnemyFindDistanceComponent.cs" t="Include" />
             <e p="EnemyMoveTimerComponent.cs" t="Include" />
             <e p="FaceRightComponent.cs" t="Include" />
+            <e p="FlipTimerComponent.cs" t="Include" />
             <e p="FreezeComponent.cs" t="Include" />
+            <e p="FreezeTimerComponent.cs" t="Include" />
             <e p="HorizontalMove" t="Include">
               <e p="DirectionComponent.cs" t="Include" />
               <e p="MovingComponent.cs" t="Include" />
@@ -278,6 +286,7 @@
             <e p="JumpTimesComponent.cs" t="Include" />
             <e p="MovementComponent.cs" t="Include" />
             <e p="PlayerComponent.cs" t="Include" />
+            <e p="PointToPlayerComponent.cs" t="Include" />
             <e p="PositionComponent.cs" t="Include" />
             <e p="ResourceComponent.cs" t="Include" />
             <e p="Service" t="Include">
@@ -326,11 +335,12 @@
               <e p="JumpTSystem.cs" t="Include" />
               <e p="PlayerControSystem.cs" t="Include" />
             </e>
-            <e p="DmageSystem.cs" t="Include" />
+            <e p="DamageSystem.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemyAiSystem.cs" t="Include" />
               <e p="EnemyMoveSystem.cs" t="Include" />
             </e>
+            <e p="FlipSystem.cs" t="Include" />
             <e p="FreezeSystem.cs" t="Include" />
             <e p="HorizontalMove" t="Include">
               <e p="HorizontalMoveTSystem.cs" t="Include" />

@@ -17,7 +17,11 @@ public class JumpTSystem
     {
         foreach(var e in entities)
         {
-            e.view.IViewControllerInstance.Jump();
+            if (!e.isFreeze)
+            {
+                e.view.IViewControllerInstance.Jump();
+                
+            }
             e.isJump = false;
         }
     }

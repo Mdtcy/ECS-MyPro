@@ -4,11 +4,11 @@ using UnityEngine;
 using Entitas;
 using Entitas.Unity;
 
-public class DmageSystem
+public class DamageSystem
  : ReactiveSystem<GameEntity>
 {
     readonly GameContext _context;
-    public DmageSystem(Contexts context) : base(context.game)
+    public DamageSystem(Contexts context) : base(context.game)
     {
         _context = context.game;
     }

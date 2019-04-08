@@ -20,17 +20,22 @@ public class VelocityXSystem : IExecuteSystem
             //暂停
             e.velocityX.value = 0;
             
-            //判定是否可以运动，isMoving为设置是否可以运动的关键
-            if(e.isMoving && e.hasSpeed)
+            //判定是否可以运动，需要再加入新的影响移动的系统之后更新
+            if(!e.isFreeze && e.hasSpeed && !e.isAttack)
             {
                 e.velocityX.value = e.direction.value;
             }
             //转向
-            if ((e.isFaceRight && e.velocityX.value < 0) || (!e.isFaceRight && e.velocityX.value > 0))
-            {
-                e.isFaceRight = !e.isFaceRight;
-                e.view.IViewControllerInstance.Flip();
-            }
+//            if (e.isPlayer)
+//            {
+//                if ((e.isFaceRight && e.velocityX.value < 0) || (!e.isFaceRight && e.velocityX.value > 0))
+//                {
+//                    e.isFaceRight = !e.isFaceRight;
+//                    e.view.IViewControllerInstance.Flip();
+//                }
+//            }
+            
+            
             //动画
             e.view.IViewControllerInstance.animator.SetFloat("HorizontalSpeed",Mathf.Abs(e.velocityX.value));
             

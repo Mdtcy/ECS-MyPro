@@ -30,7 +30,8 @@ public class IntializePlayerSystem : IInitializeSystem
         playerEntity.AddDirection(0);
         playerEntity.AddVelocityX(0);
         playerEntity.isMoving = true;
-        playerEntity.AddSpeed(8f);
+        //playerEntity.AddSpeed(8f);
+        playerEntity.ReplaceSpeed(8f);
         playerEntity.AddAttackSpeed(0.5f);
         playerEntity.AddHP(100);
         playerEntity.isCanMove = true;

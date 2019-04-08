@@ -10,42 +10,49 @@ public static class GameComponentsLookup {
 
     public const int ATK = 0;
     public const int Attack = 1;
-    public const int AttackSpeed = 2;
-    public const int CanAttack = 3;
-    public const int CanMove = 4;
-    public const int Damage = 5;
-    public const int Direction = 6;
-    public const int Enemy = 7;
-    public const int EnemyMoveTimer = 8;
-    public const int FaceRight = 9;
-    public const int FindPlayer = 10;
-    public const int Freeze = 11;
-    public const int HP = 12;
-    public const int HPUi = 13;
-    public const int Jump = 14;
-    public const int JumpForce = 15;
-    public const int JumpSpeed = 16;
-    public const int JumpTimes = 17;
-    public const int Movement = 18;
-    public const int Moving = 19;
-    public const int Player = 20;
-    public const int Position = 21;
-    public const int PositionListener = 22;
-    public const int Resource = 23;
-    public const int Speed = 24;
-    public const int Sprite = 25;
-    public const int Timer = 26;
-    public const int tttt = 27;
-    public const int Velocity = 28;
-    public const int VelocityX = 29;
-    public const int View = 30;
+    public const int AttackRange = 2;
+    public const int AttackSpeed = 3;
+    public const int AttackTimer = 4;
+    public const int CanAttack = 5;
+    public const int CanMove = 6;
+    public const int Damage = 7;
+    public const int Direction = 8;
+    public const int Enemy = 9;
+    public const int EnemyMoveTimer = 10;
+    public const int FaceRight = 11;
+    public const int FindPlayer = 12;
+    public const int FlipTimer = 13;
+    public const int Freeze = 14;
+    public const int FreezeTimer = 15;
+    public const int HP = 16;
+    public const int HPUi = 17;
+    public const int Jump = 18;
+    public const int JumpForce = 19;
+    public const int JumpSpeed = 20;
+    public const int JumpTimes = 21;
+    public const int Movement = 22;
+    public const int Moving = 23;
+    public const int Player = 24;
+    public const int PointToPlayer = 25;
+    public const int Position = 26;
+    public const int PositionListener = 27;
+    public const int Resource = 28;
+    public const int Speed = 29;
+    public const int Sprite = 30;
+    public const int Timer = 31;
+    public const int tttt = 32;
+    public const int Velocity = 33;
+    public const int VelocityX = 34;
+    public const int View = 35;
 
-    public const int TotalComponents = 31;
+    public const int TotalComponents = 36;
 
     public static readonly string[] componentNames = {
         "ATK",
         "Attack",
+        "AttackRange",
         "AttackSpeed",
+        "AttackTimer",
         "CanAttack",
         "CanMove",
         "Damage",
@@ -54,7 +61,9 @@ public static class GameComponentsLookup {
         "EnemyMoveTimer",
         "FaceRight",
         "FindPlayer",
+        "FlipTimer",
         "Freeze",
+        "FreezeTimer",
         "HP",
         "HPUi",
         "Jump",
@@ -64,6 +73,7 @@ public static class GameComponentsLookup {
         "Movement",
         "Moving",
         "Player",
+        "PointToPlayer",
         "Position",
         "PositionListener",
         "Resource",
@@ -79,7 +89,9 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(ATKComponent),
         typeof(AttackComponent),
+        typeof(AttackRangeComponent),
         typeof(AttackSpeedComponent),
+        typeof(AttackTimerComponent),
         typeof(CanAttackComponent),
         typeof(CanMoveComponent),
         typeof(DamageComponent),
@@ -88,7 +100,9 @@ public static class GameComponentsLookup {
         typeof(EnemyMoveTimerComponent),
         typeof(FaceRightComponent),
         typeof(FindPlayerComponent),
+        typeof(FlipTimerComponent),
         typeof(FreezeComponent),
+        typeof(FreezeTimerComponent),
         typeof(HPComponent),
         typeof(HPUiComponent),
         typeof(JumpComponent),
@@ -98,6 +112,7 @@ public static class GameComponentsLookup {
         typeof(MovementComponent),
         typeof(MovingComponent),
         typeof(PlayerComponent),
+        typeof(PointToPlayerComponent),
         typeof(PositionComponent),
         typeof(PositionListenerComponent),
         typeof(ResourceComponent),

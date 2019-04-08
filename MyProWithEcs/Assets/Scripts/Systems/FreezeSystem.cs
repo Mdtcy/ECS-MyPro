@@ -1,34 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Entitas;
 using UnityEngine;
-using Entitas;
-using Entitas.Unity;
 
-public class FreezeSystem
- : ReactiveSystem<GameEntity>
+public class FreezeSystem : IExecuteSystem
 {
-    readonly GameContext _context;
-    public FreezeSystem(Contexts context) : base(context.game)
+    private readonly IGroup<GameEntity> _freezes;
+
+    public FreezeSystem(Contexts contexts)
     {
-        _context = context.game;
+        
+        _freezes = contexts.game.GetGroup(GameMatcher.AllOf(GameMatcher.Freeze,GameMatcher.FreezeTimer));
     }
 
-    protected override void Execute(List<GameEntity> entities)
+    public void Execute()
     {
-        foreach(var e in entities)
+        
+        foreach (GameEntity e in _freezes.GetEntities())
         {
-            e.isCanMove = false;
-            e.isCanAttack = false;
+            if (e.isFreeze)
+            {
+               
+                if (e.freezeTimer.value > 0)
+                {
+                     
+                    //动画停止
+                    e.view.IViewControllerInstance.animator.speed = 0;
+                    
+                    e.ReplaceFreezeTimer(e.freezeTimer.value - Time.deltaTime);
+                    
+                }
+                else if(e.freezeTimer.value <=0)
+                {
+                    e.RemoveFreezeTimer();
+                    e.isFreeze = false;
+                    e.view.IViewControllerInstance.animator.speed = 1;
+                    
+                }
+            }
         }
-    }
-
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.isFreeze;
-    }
-
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-    {
-       return context.CreateCollector(GameMatcher.Freeze);
     }
 }

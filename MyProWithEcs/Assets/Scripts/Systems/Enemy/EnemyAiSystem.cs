@@ -14,14 +14,30 @@ public class EnemyAiSystem : IExecuteSystem
 
     public void Execute()
     {
-        var playerGo = GameObject.FindGameObjectWithTag("Player");
         
-        if (playerGo != null)
-        {
-            var go = playerGo.GetComponent<IViewController>();
+        //var playerGo = GameObject.FindGameObjectWithTag("Player");
+        
+//        if (playerGo != null)
+//        {
+            //var go = playerGo.GetComponent<IViewController>();
             foreach (GameEntity e in _enemys.GetEntities())
             {
-                //计算该enemy与player的距离  
+                IViewController go;
+                if (!e.hasPointToPlayer)
+                {
+                    var playerGo = GameObject.FindGameObjectWithTag("Player");
+                    e.AddPointToPlayer(playerGo);
+                    go=e.pointToPlayer.player.GetComponent<IViewController>();
+                }
+                else
+                {
+                    go = e.pointToPlayer.player.GetComponent<IViewController>();
+                }
+
+                if (go != null)
+                {
+                    var playerGo = e.pointToPlayer.player;
+                     //计算该enemy与player的距离  
                var distance= Vector2.Distance(new Vector2(go.Position.x, go.Position.y), new Vector2(e.view.IViewControllerInstance.Position.x, e.view.IViewControllerInstance.Position.y));
                 if(distance<=_contexts.meta.enemyFindDistance.findDistance)//小于这个距离则发现
                 {
@@ -31,36 +47,24 @@ public class EnemyAiSystem : IExecuteSystem
                     }
                     e.isFindPlayer = true;
 
-                    if (Mathf.Abs((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x)) < 2)
+                    //攻击
+                    if (Mathf.Abs((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x)) < e.attackRange.value)
                     {
                         e.ReplaceDirection(0);
-                        if (distance <= _contexts.meta.enemyCanAttackDistance.distance)
-                        {
-                            if (e.isAttack == false)
-                            {
-                                e.isAttack = true;
-                            }
-                        }
+                        
+                        e.isAttack = true;
                     }
-                    else if ((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x) > 2f)//如果player在右边
+                    else if ((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x) > e.attackRange.value)//如果player在右边
                     {
                         e.ReplaceDirection(1);
                     }
-                    else if((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x)< -2f)
+                    else if((playerGo.transform.position.x - e.view.IViewControllerInstance.Position.x)< -e.attackRange.value)
                     {
                         e.ReplaceDirection(-1);
                     }
                    
 
                     
-                    if(distance<=1)
-                    {
-                        if (e.isAttack == false)
-                        {
-                            e.isAttack = true;
-                        }
-
-                    }
                 }
                 else if(distance>=_contexts.meta.enemyFindDistance.lostFindDistance)//大于这个距离则失去player目标
                 {
@@ -93,10 +97,12 @@ public class EnemyAiSystem : IExecuteSystem
                         e.RemoveEnemyMoveTimer();
                     }
                 }
+                }
+               
                 
                 
             }
-        }
+        
         
     }
 }
