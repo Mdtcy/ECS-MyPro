@@ -11,6 +11,8 @@ public class UnityGameViewController : MonoBehaviour, IViewController
     public GameEntity _entity;
     public Vector3 Position { get { return transform.position; } set { transform.position = value; } }
     public bool Active { get { return gameObject.activeSelf; } set { gameObject.SetActive(value); } }
+    //public Entity _Entity { get; set; }
+
     public Animator animator
     {get { return this.gameObject.GetComponent<Animator>();}}
 
@@ -164,13 +166,16 @@ public class UnityGameViewController : MonoBehaviour, IViewController
         }
     }
 
+
     /// <summary>
     /// 用于创造一个物体并将创造出这个物体的物体传进被创造的物体，通常是技能，在每个特定的技能释放方法里调用
     /// </summary>
     /// <param name="name"></param>
-    public void CreatGameObject(string name)
-    {    
-        CreatedObject go = GameObject.Instantiate(_contexts.meta.gameSetup.value.AttackObject);
-        go._gameObject = this.gameObject;
+
+    public CreatedObject CreatGameObject(CreatedObject go)
+    {
+        CreatedObject cGo = (CreatedObject)GameObject.Instantiate(go);
+        cGo._gameObject = this.gameObject;
+        return cGo;
     }
 }

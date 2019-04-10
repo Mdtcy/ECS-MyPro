@@ -7,6 +7,9 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="2D Animated Monster Pack" t="Include">
+          <e p="notes.txt" t="Include" />
+        </e>
         <e p="Asset" t="Include">
           <e p="Gothicvania Cemetery Artwork" t="Include">
             <e p="about.txt" t="Include" />
@@ -142,6 +145,7 @@
             </e>
           </e>
         </e>
+        <e p="DamageText.cs" t="Include" />
         <e p="DesperateDevs" t="Include">
           <e p="Compile.cs" t="Include" />
         </e>
@@ -230,6 +234,7 @@
             <e p="Components" t="Include">
               <e p="MetaEnemyFindDistanceComponent.cs" t="Include" />
               <e p="MetaGameSetupComponent.cs" t="Include" />
+              <e p="MetaHudTextServiceComponent.cs" t="Include" />
               <e p="MetaInputServiceComponent.cs" t="Include" />
               <e p="MetaViewServiceComponent.cs" t="Include" />
             </e>
@@ -247,6 +252,8 @@
             <e p="UIMatcher.cs" t="Include" />
           </e>
         </e>
+        <e p="hudTest.cs" t="Include" />
+        <e p="player2.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="ATKComponent.cs" t="Include" />
@@ -290,6 +297,7 @@
             <e p="PositionComponent.cs" t="Include" />
             <e p="ResourceComponent.cs" t="Include" />
             <e p="Service" t="Include">
+              <e p="HudTextServiceComponent.cs" t="Include" />
               <e p="InputServiceComponent.cs" t="Include" />
               <e p="ViewServiceComponent.cs" t="Include" />
             </e>
@@ -312,9 +320,11 @@
           <e p="GameSetup.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IEventListener.cs" t="Include" />
+            <e p="IHudTextService.cs" t="Include" />
             <e p="IViewController.cs" t="Include" />
             <e p="PositionListener.cs" t="Include" />
             <e p="Service" t="Include">
+              <e p="HudTextService.cs" t="Include" />
               <e p="IAttack.cs" t="Include" />
               <e p="IInputService.cs" t="Include" />
               <e p="IViewService.cs" t="Include" />
@@ -355,6 +365,7 @@
             </e>
             <e p="InputSystem.cs" t="Include" />
             <e p="Service" t="Include">
+              <e p="RegisterHudTextServiceSystem.cs" t="Include" />
               <e p="RegisterInputServiceSystem.cs" t="Include" />
               <e p="RegisterViewServiceSystem.cs" t="Include" />
               <e p="ServiceRegistrationSystems.cs" t="Include" />
@@ -372,6 +383,44 @@
         <e p="si.cs" t="Include" />
         <e p="testCollision.cs" t="Include" />
         <e p="Third-Party Notices.txt" t="Include" />
+        <e p="UHUDText" t="Include">
+          <e p="Content" t="Include">
+            <e p="Script" t="Include">
+              <e p="Core" t="Include">
+                <e p="bl_HUDText.cs" t="Include" />
+                <e p="bl_Text.cs" t="Include" />
+                <e p="Constructors" t="Include">
+                  <e p="HUDTextInfo.cs" t="Include" />
+                </e>
+                <e p="Editor" t="Include">
+                  <e p="bl_HUDTextEditor.cs" t="Include" />
+                </e>
+                <e p="Utils" t="Include">
+                  <e p="bl_TextOnCollision.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Internal" t="Include">
+                <e p="Enum" t="Include">
+                  <e p="bl_Guidance.cs" t="Include" />
+                </e>
+                <e p="Utils" t="Include">
+                  <e p="bl_UHTUtils.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Documentation" t="Include">
+            <e p="ReadMe.txt" t="Include" />
+          </e>
+          <e p="Example" t="Include">
+            <e p="Script" t="Include">
+              <e p="bl_ExampleUI.cs" t="Include" />
+              <e p="bl_RandomBot.cs" t="Include" />
+              <e p="bl_TestMouseEvent.cs" t="Include" />
+              <e p="bl_UHTCamera.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="UiIni.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />

@@ -27,18 +27,29 @@ public class FlipSystem : IExecuteSystem
             }
             else if (e.isEnemy && !e.isFreeze && !e.isAttack)//需要更新的条件
             {
-                if (!e.hasPointToPlayer)
+                if (e.isFindPlayer)
                 {
-                    var playerGo=GameObject.FindGameObjectWithTag("Player");
-                    e.AddPointToPlayer(playerGo);
-                }
+                    if (!e.hasPointToPlayer)
+                    {
+                        var playerGo=GameObject.FindGameObjectWithTag("Player");
+                        e.AddPointToPlayer(playerGo);
+                    }
                 
-                if (e.hasPointToPlayer)
+                    if (e.hasPointToPlayer)
+                    {
+                        if ((e.pointToPlayer.player.GetComponent<IViewController>().Position.x -
+                             e.view.IViewControllerInstance.Position.x < 0 && e.isFaceRight) || 
+                            (e.pointToPlayer.player.GetComponent<IViewController>().Position.x -
+                             e.view.IViewControllerInstance.Position.x > 0 && !e.isFaceRight) )//
+                        {
+                            e.isFaceRight = !e.isFaceRight;
+                            e.view.IViewControllerInstance.Flip();
+                        }
+                    }
+                }
+                else if(!e.isFindPlayer)
                 {
-                    if ((e.pointToPlayer.player.GetComponent<IViewController>().Position.x -
-                         e.view.IViewControllerInstance.Position.x < 0 && e.isFaceRight) || 
-                        (e.pointToPlayer.player.GetComponent<IViewController>().Position.x -
-                        e.view.IViewControllerInstance.Position.x > 0 && !e.isFaceRight) )//
+                    if ((e.direction.value == 1 && !e.isFaceRight) || (e.direction.value == -1 && e.isFaceRight))
                     {
                         e.isFaceRight = !e.isFaceRight;
                         e.view.IViewControllerInstance.Flip();

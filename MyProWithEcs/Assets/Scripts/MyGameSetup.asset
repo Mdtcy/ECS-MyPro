@@ -16,3 +16,7 @@ MonoBehaviour:
     type: 3}
   AttackObject: {fileID: 6569132330177883734, guid: dacf50ba1594016498b1aae2cf4ab5af,
     type: 3}
+  DamageText: {fileID: 6621761694675315727, guid: 09d89561df87df04c95a36bfdfdab2eb,
+    type: 3}
+  DamageCanvas: {fileID: 3730736400481048409, guid: 4f01dfcba31c372499e756b82abb2543,
+    type: 3}

@@ -19,8 +19,11 @@ public class GameController : MonoBehaviour
         contexts.meta.ReplaceGameSetup(gameSetUp);
         
         contexts.meta.ReplaceEnemyFindDistance(5,10);
-        
-        
+
+//        string t = "aaaaaaaaaaaa";
+//        HUDTextInfo info3 = new HUDTextInfo(transform, t);
+//        bl_UHTUtils.GetHUDText.NewText(info3);
+//        
         _systems = CreateSystems(contexts);
         
         
@@ -36,7 +39,7 @@ public class GameController : MonoBehaviour
     }
     private static Systems CreateSystems(Contexts contexts)
     {
-        var _services = new Services(new UnityViewService(),new UnityInputService());
+        var _services = new Services(new UnityViewService(),new UnityInputService(),new HudTextService());
         // responsible for creating gameobjects for views
         //new UnityApplicationService(), // gives app functionality like .Quit()
        // new UnityTimeService(), // gives .deltaTime, .fixedDeltaTime etc

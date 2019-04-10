@@ -11,7 +11,7 @@ public interface IViewController
 {
     Vector3 Position { get; set; }
     bool Active { get; set; }
-
+    // _Entity { get; set; }
     Animator animator { get;  }
     float VelocityX { get; set; }
     Transform HpUiTransform { get; }
@@ -28,6 +28,6 @@ public interface IViewController
     bool IsGrounded();
     void Flip();
 
-    void CreatGameObject( String name);
+    CreatedObject CreatGameObject( CreatedObject go);
 
 }
