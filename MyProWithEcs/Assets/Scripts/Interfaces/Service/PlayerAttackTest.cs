@@ -39,9 +39,9 @@ public class PlayerAttackTest : MonoBehaviour,IAttack
 
     public void destroyNi()
     {
-        Debug.Log("1111111111111111111");
+        
         Destroy((GameObject)go.gameObject);
-        Debug.Log(go);
+        
         
     }
 }

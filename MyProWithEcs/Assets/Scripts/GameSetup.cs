@@ -13,4 +13,5 @@ public class GameSetup : ScriptableObject
     public CreatedObject AttackObject;
     public CreatedObject DamageText;
     public Canvas DamageCanvas;
+    public LayerMask Ground;
 }

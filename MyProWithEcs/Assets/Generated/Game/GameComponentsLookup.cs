@@ -14,38 +14,40 @@ public static class GameComponentsLookup {
     public const int AttackSpeed = 3;
     public const int AttackTimer = 4;
     public const int CanAttack = 5;
-    public const int CanMove = 6;
-    public const int Damage = 7;
-    public const int Direction = 8;
-    public const int Enemy = 9;
-    public const int EnemyMoveTimer = 10;
-    public const int FaceRight = 11;
-    public const int FindPlayer = 12;
-    public const int FlipTimer = 13;
-    public const int Freeze = 14;
-    public const int FreezeTimer = 15;
-    public const int HP = 16;
-    public const int HPUi = 17;
-    public const int Jump = 18;
-    public const int JumpForce = 19;
-    public const int JumpSpeed = 20;
-    public const int JumpTimes = 21;
-    public const int Movement = 22;
-    public const int Moving = 23;
-    public const int Player = 24;
-    public const int PointToPlayer = 25;
-    public const int Position = 26;
-    public const int PositionListener = 27;
-    public const int Resource = 28;
-    public const int Speed = 29;
-    public const int Sprite = 30;
-    public const int Timer = 31;
-    public const int tttt = 32;
-    public const int Velocity = 33;
-    public const int VelocityX = 34;
-    public const int View = 35;
+    public const int CanJumpDown = 6;
+    public const int CanMove = 7;
+    public const int Damage = 8;
+    public const int Direction = 9;
+    public const int eee = 10;
+    public const int Enemy = 11;
+    public const int EnemyMoveTimer = 12;
+    public const int FaceRight = 13;
+    public const int FindPlayer = 14;
+    public const int FlipTimer = 15;
+    public const int Freeze = 16;
+    public const int FreezeTimer = 17;
+    public const int HP = 18;
+    public const int HPUi = 19;
+    public const int Jump = 20;
+    public const int JumpForce = 21;
+    public const int JumpSpeed = 22;
+    public const int JumpTimes = 23;
+    public const int Movement = 24;
+    public const int Moving = 25;
+    public const int Player = 26;
+    public const int PointToPlayer = 27;
+    public const int Position = 28;
+    public const int PositionListener = 29;
+    public const int Resource = 30;
+    public const int Speed = 31;
+    public const int Sprite = 32;
+    public const int Timer = 33;
+    public const int tttt = 34;
+    public const int Velocity = 35;
+    public const int VelocityX = 36;
+    public const int View = 37;
 
-    public const int TotalComponents = 36;
+    public const int TotalComponents = 38;
 
     public static readonly string[] componentNames = {
         "ATK",
@@ -54,9 +56,11 @@ public static class GameComponentsLookup {
         "AttackSpeed",
         "AttackTimer",
         "CanAttack",
+        "CanJumpDown",
         "CanMove",
         "Damage",
         "Direction",
+        "eee",
         "Enemy",
         "EnemyMoveTimer",
         "FaceRight",
@@ -93,9 +97,11 @@ public static class GameComponentsLookup {
         typeof(AttackSpeedComponent),
         typeof(AttackTimerComponent),
         typeof(CanAttackComponent),
+        typeof(CanJumpDownComponent),
         typeof(CanMoveComponent),
         typeof(DamageComponent),
         typeof(Direction),
+        typeof(eeeComponent),
         typeof(EnemyComponent),
         typeof(EnemyMoveTimerComponent),
         typeof(FaceRightComponent),

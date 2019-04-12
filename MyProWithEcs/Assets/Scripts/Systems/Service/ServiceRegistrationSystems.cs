@@ -1,4 +1,6 @@
-﻿public class ServiceRegistrationSystems : Feature
+﻿
+using Entitas;
+public class ServiceRegistrationSystems : Feature
 {
     public ServiceRegistrationSystems(Contexts contexts, Services services)
     {
@@ -10,7 +12,7 @@
         //Add(new RegisterAiServiceSystem(contexts, services.Ai));
         //Add(new RegisterConfigurationServiceSystem(contexts, services.Config));
         // Add(new RegisterCameraServiceSystem(contexts, services.Camera));
-        //Add(new RegisterPhysicsServiceSystem(contexts, services.Physics));
+         Add(new RegisterPhysicServiceSystem(contexts, services.PhysicService));
         // Add(new ServiceRegistrationCompleteSystem(contexts));
     }
 }

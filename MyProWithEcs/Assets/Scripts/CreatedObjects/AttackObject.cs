@@ -21,7 +21,7 @@ public class AttackObject : CreatedObject
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject);
+        
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<UnityGameViewController>()._entity.ReplaceDamage(10);
@@ -29,5 +29,4 @@ public class AttackObject : CreatedObject
         
     }
     
-    //增加一个自毁
 }

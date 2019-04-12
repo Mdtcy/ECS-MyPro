@@ -22,7 +22,7 @@ public class IntializePlayerSystem : IInitializeSystem
         playerEntity.AddSprite("Player1");
         
         playerEntity.AddJumpForce(800f);
-        playerEntity.AddJumpTimes(2,2);
+        playerEntity.AddJumpTimes(3,3);
         playerEntity.AddJumpSpeed(18f);
         playerEntity.AddATK(10);
         //Move

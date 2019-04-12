@@ -25,6 +25,10 @@ public class IntializeSnakeSystem : IInitializeSystem
         _entity.isCanMove = true;
         _entity.isCanAttack = true;
         _entity.AddAttackRange(2f);
+        _entity.isCanJumpDown = true;
+        _entity.AddJumpForce(800f);
+        _entity.AddJumpTimes(1,1);
+        _entity.AddJumpSpeed(6f);
 
     }
 }

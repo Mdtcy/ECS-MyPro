@@ -19,7 +19,6 @@ public class VelocityXSystem : IExecuteSystem
         {
             //暂停
             e.velocityX.value = 0;
-            
             //判定是否可以运动，需要再加入新的影响移动的系统之后更新
             if(!e.isFreeze && e.hasSpeed && !e.isAttack)
             {

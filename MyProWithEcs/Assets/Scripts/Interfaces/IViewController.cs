@@ -13,7 +13,9 @@ public interface IViewController
     bool Active { get; set; }
     // _Entity { get; set; }
     Animator animator { get;  }
+    Collider2D collider2D { get; }
     float VelocityX { get; set; }
+    float VelocityY { get; }
     Transform HpUiTransform { get; }
     void InitializeView(Contexts contexts, IEntity Entity);
     

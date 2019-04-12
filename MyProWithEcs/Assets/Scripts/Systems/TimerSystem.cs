@@ -23,6 +23,8 @@ public class TimerSystem : IExecuteSystem
             {
                 
                 e.enemyMoveTimer.value = e.enemyMoveTimer.value - Time.deltaTime;
+                if(e.enemyMoveTimer.value<0)
+                    e.RemoveEnemyMoveTimer();
             }
             else if(e.hasFlipTimer)
             {

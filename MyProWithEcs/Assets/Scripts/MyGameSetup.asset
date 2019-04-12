@@ -20,3 +20,6 @@ MonoBehaviour:
     type: 3}
   DamageCanvas: {fileID: 3730736400481048409, guid: 4f01dfcba31c372499e756b82abb2543,
     type: 3}
+  Ground:
+    serializedVersion: 2
+    m_Bits: 256

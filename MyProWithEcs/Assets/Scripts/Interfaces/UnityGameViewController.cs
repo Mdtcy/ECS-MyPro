@@ -16,6 +16,11 @@ public class UnityGameViewController : MonoBehaviour, IViewController
     public Animator animator
     {get { return this.gameObject.GetComponent<Animator>();}}
 
+    public Collider2D collider2D
+    {
+        get { return this.gameObject.GetComponent<Collider2D>(); }
+    }
+
     public float VelocityX
     {
         get { return this.GetComponent<Rigidbody2D>().velocity.x; }
@@ -26,6 +31,11 @@ public class UnityGameViewController : MonoBehaviour, IViewController
 
     //public Transform transform { get { return this.transform; } }
     public Animator _animator { get { return gameObject.GetComponent<Animator>(); } }
+
+    public float VelocityY
+    {
+        get { return _rigBody.velocity.y; }
+    }
 
     public Transform HpUiTransform
     {
@@ -138,18 +148,28 @@ public class UnityGameViewController : MonoBehaviour, IViewController
 
     public bool IsGrounded()
     {
-        
-        var _collider = Physics2D.OverlapCircle(GroundCheck.position, GROUND_CHECK_RADIUS, WhatIsGround);
-
-        if (_collider != null)
-        {
-            _groundRigidBody = _collider.gameObject.GetComponent<Rigidbody2D>();
-            return true;
-        }
-        else
+        var bound = _rigBody.GetComponent<Collider2D>().bounds;
+        var raycast = Physics2D.Raycast(new Vector2(bound.center.x, bound.center.y - bound.extents.y), Vector2.down, .2f,
+            _contexts.meta.gameSetup.value.Ground);
+        if (raycast.collider == null)
         {
             return false;
         }
+        else
+        {
+            return true;
+        }
+//        var _collider = Physics2D.OverlapCircle(GroundCheck.position, GROUND_CHECK_RADIUS, WhatIsGround);
+//
+//        if (_collider != null)
+//        {
+//            _groundRigidBody = _collider.gameObject.GetComponent<Rigidbody2D>();
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
     }
     public void Flip()
     {

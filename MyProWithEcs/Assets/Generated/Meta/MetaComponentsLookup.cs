@@ -12,15 +12,17 @@ public static class MetaComponentsLookup {
     public const int GameSetup = 1;
     public const int HudTextService = 2;
     public const int InputService = 3;
-    public const int ViewService = 4;
+    public const int PhysicService = 4;
+    public const int ViewService = 5;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 6;
 
     public static readonly string[] componentNames = {
         "EnemyFindDistance",
         "GameSetup",
         "HudTextService",
         "InputService",
+        "PhysicService",
         "ViewService"
     };
 
@@ -29,6 +31,7 @@ public static class MetaComponentsLookup {
         typeof(GameSetupComponent),
         typeof(HudTextServiceComponent),
         typeof(InputServiceComponent),
+        typeof(PhysicServiceComponent),
         typeof(ViewServiceComponent)
     };
 }

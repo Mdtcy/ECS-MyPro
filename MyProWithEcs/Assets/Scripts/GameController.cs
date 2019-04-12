@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     }
     private static Systems CreateSystems(Contexts contexts)
     {
-        var _services = new Services(new UnityViewService(),new UnityInputService(),new HudTextService());
+        var _services = new Services(new UnityViewService(),new UnityInputService(),new HudTextService(),new UnityPhysicService());
         // responsible for creating gameobjects for views
         //new UnityApplicationService(), // gives app functionality like .Quit()
        // new UnityTimeService(), // gives .deltaTime, .fixedDeltaTime etc
