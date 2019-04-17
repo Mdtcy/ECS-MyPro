@@ -173,8 +173,10 @@
           <e p="Feature.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="Components" t="Include">
+              <e p="GameAirComponent.cs" t="Include" />
               <e p="GameATKComponent.cs" t="Include" />
-              <e p="GameAttackComponent.cs" t="Include" />
+              <e p="GameAttackComandComponent.cs" t="Include" />
+              <e p="GameAttackingComponent.cs" t="Include" />
               <e p="GameAttackRangeComponent.cs" t="Include" />
               <e p="GameAttackSpeedComponent.cs" t="Include" />
               <e p="GameAttackTimerComponent.cs" t="Include" />
@@ -191,9 +193,10 @@
               <e p="GameFlipTimerComponent.cs" t="Include" />
               <e p="GameFreezeComponent.cs" t="Include" />
               <e p="GameFreezeTimerComponent.cs" t="Include" />
+              <e p="GameGroundComponent.cs" t="Include" />
               <e p="GameHPComponent.cs" t="Include" />
               <e p="GameHPUiComponent.cs" t="Include" />
-              <e p="GameJumpComponent.cs" t="Include" />
+              <e p="GameJumpCommandComponent.cs" t="Include" />
               <e p="GameJumpForceComponent.cs" t="Include" />
               <e p="GameJumpSpeedComponent.cs" t="Include" />
               <e p="GameJumpTimesComponent.cs" t="Include" />
@@ -258,6 +261,9 @@
         <e p="hudTest.cs" t="Include" />
         <e p="player2.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Command" t="Include">
+            <e p="AttackComandComponent.cs" t="Include" />
+          </e>
           <e p="Components" t="Include">
             <e p="ATKComponent.cs" t="Include" />
             <e p="AttackComponent.cs" t="Include" />
@@ -292,7 +298,7 @@
               <e p="VerticalComponent.cs" t="Include" />
             </e>
             <e p="InputManagerComponent.cs" t="Include" />
-            <e p="JumpComponent.cs" t="Include" />
+            <e p="JumpCommandComponent.cs" t="Include" />
             <e p="JumpForceComponent.cs" t="Include" />
             <e p="JumpSpeedComponent.cs" t="Include" />
             <e p="JumpTimesComponent.cs" t="Include" />
@@ -309,6 +315,11 @@
             </e>
             <e p="SpeedComponent.cs" t="Include" />
             <e p="SpriteComponent.cs" t="Include" />
+            <e p="State" t="Include">
+              <e p="AirComponent.cs" t="Include" />
+              <e p="AttackingComponent.cs" t="Include" />
+              <e p="GroundComponent.cs" t="Include" />
+            </e>
             <e p="TimerComponent.cs" t="Include" />
             <e p="ttttComponent.cs" t="Include" />
             <e p="UI" t="Include">
@@ -325,28 +336,31 @@
           <e p="GameController.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
           <e p="Interfaces" t="Include">
+            <e p="IAttack.cs" t="Include" />
             <e p="IEventListener.cs" t="Include" />
             <e p="IHudTextService.cs" t="Include" />
+            <e p="IInputService.cs" t="Include" />
             <e p="IPhysicService.cs" t="Include" />
             <e p="IViewController.cs" t="Include" />
+            <e p="PlayerAttackTest.cs" t="Include" />
             <e p="PositionListener.cs" t="Include" />
             <e p="Service" t="Include">
               <e p="HudTextService.cs" t="Include" />
-              <e p="IAttack.cs" t="Include" />
-              <e p="IInputService.cs" t="Include" />
               <e p="IViewService.cs" t="Include" />
-              <e p="PlayerAttackTest.cs" t="Include" />
-              <e p="SnakeAttackTest.cs" t="Include" />
               <e p="UnityInputService.cs" t="Include" />
               <e p="UnityPhysicService.cs" t="Include" />
               <e p="UnityViewService.cs" t="Include" />
             </e>
+            <e p="SnakeAttackTest.cs" t="Include" />
             <e p="UnityGameViewController.cs" t="Include" />
           </e>
           <e p="Services.cs" t="Include" />
           <e p="Systems" t="Include">
             <e p="AddViewSystem.cs" t="Include" />
             <e p="AttackSystem.cs" t="Include" />
+            <e p="CleanUp" t="Include">
+              <e p="CommandCleanSystem.cs" t="Include" />
+            </e>
             <e p="Contro" t="Include">
               <e p="ControSystems.cs" t="Include" />
               <e p="HorizontalMoveSystem.cs" t="Include" />
@@ -386,6 +400,7 @@
             <e p="UI" t="Include">
               <e p="HPUiSystem.cs" t="Include" />
             </e>
+            <e p="UpdateIfAirSystem.cs" t="Include" />
           </e>
         </e>
         <e p="si.cs" t="Include" />

@@ -25,7 +25,7 @@ public class FlipSystem : IExecuteSystem
                     e.view.IViewControllerInstance.Flip();
                 }
             }
-            else if (e.isEnemy && !e.isFreeze && !e.isAttack)//需要更新的条件
+            else if (e.isEnemy && !e.isFreeze && !e.isAttacking)//需要更新的条件
             {
                 if (e.isFindPlayer)
                 {

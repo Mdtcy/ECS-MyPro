@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly AttackComponent attackComponent = new AttackComponent();
+    static readonly AttackComandComponent attackComandComponent = new AttackComandComponent();
 
-    public bool isAttack {
-        get { return HasComponent(GameComponentsLookup.Attack); }
+    public bool isAttackComand {
+        get { return HasComponent(GameComponentsLookup.AttackComand); }
         set {
-            if (value != isAttack) {
-                var index = GameComponentsLookup.Attack;
+            if (value != isAttackComand) {
+                var index = GameComponentsLookup.AttackComand;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : attackComponent;
+                            : attackComandComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherAttack;
+    static Entitas.IMatcher<GameEntity> _matcherAttackComand;
 
-    public static Entitas.IMatcher<GameEntity> Attack {
+    public static Entitas.IMatcher<GameEntity> AttackComand {
         get {
-            if (_matcherAttack == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Attack);
+            if (_matcherAttackComand == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.AttackComand);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherAttack = matcher;
+                _matcherAttackComand = matcher;
             }
 
-            return _matcherAttack;
+            return _matcherAttackComand;
         }
     }
 }

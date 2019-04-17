@@ -21,7 +21,7 @@ public class IntializePlayerSystem : IInitializeSystem
         playerEntity.AddPosition(new Vector3(-2, 0, 0));
         playerEntity.AddSprite("Player1");
         
-        playerEntity.AddJumpForce(800f);
+        //playerEntity.AddJumpForce(800f);
         playerEntity.AddJumpTimes(3,3);
         playerEntity.AddJumpSpeed(18f);
         playerEntity.AddATK(10);

@@ -17,22 +17,40 @@ public class JumpTSystem
     {
         foreach(var e in entities)
         {
-            if (!e.isFreeze)
+//            if (!e.isAttacking &&!e.isFreeze)
+//            {
+//                e.view.IViewControllerInstance.Jump();
+//            }
+//            e.isJump = false;
+
+            if (!e.isAttacking && !e.isFreeze)
             {
-                e.view.IViewControllerInstance.Jump();
-                
+                if (e.isGround)
+                {
+                    e.ReplaceJumpTimes(e.jumpTimes.MaxJumpTimes,e.jumpTimes.MaxJumpTimes);
+                    e.view.IViewControllerInstance.Jump();
+                    e.ReplaceJumpTimes(e.jumpTimes.MaxJumpTimes,e.jumpTimes.JumpTimes-1);
+                }
+                else if(e.isAir)
+                {
+                    if (e.jumpTimes.JumpTimes > 0)
+                    {
+                        e.view.IViewControllerInstance.Jump();
+                        e.ReplaceJumpTimes(e.jumpTimes.MaxJumpTimes,e.jumpTimes.JumpTimes-1);
+                       
+                    }
+                }
             }
-            e.isJump = false;
         }
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isJump;
+        return entity.isJumpCommand;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.Jump);
+        return context.CreateCollector(GameMatcher.JumpCommand);
     }
 }

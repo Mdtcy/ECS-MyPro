@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 using UnityEditor.Build;
+using  Entitas.Unity;
 
 //通过实现Iviewcontroller接口来为view 层与模拟层提供连接 ，模拟层通过操作这个来实际操作view
 public class UnityGameViewController : MonoBehaviour, IViewController
@@ -121,6 +122,7 @@ public class UnityGameViewController : MonoBehaviour, IViewController
     {
         _contexts = contexts;
         _entity = (GameEntity)entity;
+        gameObject.Link(entity);
     }
     /// <summary>
     /// Jump
@@ -128,21 +130,22 @@ public class UnityGameViewController : MonoBehaviour, IViewController
     public void Jump()
     {
         
-        if(IsGrounded())
-        {
-            
-            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
-            //_rigBody.AddForce(Vector2.up * _entity.jumpForce.jumpForceValue);
-            _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
-            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes,_entity.jumpTimes.JumpTimes - 1);
-
-        }
-        else if(_entity.jumpTimes.JumpTimes>0)
-        {
-            //_rigBody.AddForce(Vector2.up * _entity.jumpForce.jumpForceValue);
-            _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
-            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes,_entity.jumpTimes.JumpTimes - 1);
-        }
+//        if(IsGrounded())
+//        {
+//            
+//            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes, _entity.jumpTimes.MaxJumpTimes);
+//            //_rigBody.AddForce(Vector2.up * _entity.jumpForce.jumpForceValue);
+//            _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
+//            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes,_entity.jumpTimes.JumpTimes - 1);
+//
+//        }
+//        else if(_entity.jumpTimes.JumpTimes>0)
+//        {
+//            //_rigBody.AddForce(Vector2.up * _entity.jumpForce.jumpForceValue);
+//            _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
+//            _entity.ReplaceJumpTimes(_entity.jumpTimes.MaxJumpTimes,_entity.jumpTimes.JumpTimes - 1);
+//        }
+        _rigBody.velocity = new Vector2(_rigBody.velocity.x, _entity.jumpSpeed.value);
         
     }
 

@@ -6,7 +6,7 @@ public class UnityInputService : IInputService
 {
     public bool GetFireButtonDown()
     {
-        return Input.GetKeyDown(KeyCode.Z);
+        return Input.GetKeyDown(KeyCode.J);
     }
 
     public float GetHorizontal()

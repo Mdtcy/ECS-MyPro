@@ -30,11 +30,10 @@ public class HPUiSystem : IExecuteSystem
                 
                 go1.transform.Find("Slider").GetComponent<Slider>().maxValue = e.hP.value;
                 go1.transform.Find("Slider").GetComponent<Slider>().direction=Slider.Direction.RightToLeft;
-                //Debug.Log(go.transform.Find("Slider").GetComponent<Slider>().maxValue);
-                //go.transform.Find("Slider").GetComponent<Slider>().gameObject.transform.position =e.view.IViewControllerInstance.Position;
-
-                // var slider=go.gameObject.transform.Find("Slider");
-                // slider.transform.position = Camera.main.WorldToScreenPoint(e.view.IViewControllerInstance.Position);
+                
+                
+                
+                
             }
             
             

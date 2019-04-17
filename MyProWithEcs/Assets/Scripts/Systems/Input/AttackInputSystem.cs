@@ -18,7 +18,7 @@ public class AttackInputSystem : IExecuteSystem
         {
             if (_contexts.meta.inputService.instance.GetFireButtonDown())
             {
-                e.isAttack = true;
+                e.isAttackComand = true;
 ;            }
         }
     }

@@ -19,10 +19,10 @@ public class PlayerControSystem : IExecuteSystem
         foreach (GameEntity e in _players.GetEntities())
         {
             e.direction.value = _contexts.input.horizontal.value;
-            e.isJump = _contexts.input.isJumpInput;
+            e.isJumpCommand = _contexts.input.isJumpInput;
             if (_contexts.input.isFireInput)
             {
-                e.isAttack = true;
+                e.isAttackComand = true;
             }
         }
     }

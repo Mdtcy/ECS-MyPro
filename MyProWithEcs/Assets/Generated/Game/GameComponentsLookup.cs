@@ -8,50 +8,55 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int ATK = 0;
-    public const int Attack = 1;
-    public const int AttackRange = 2;
-    public const int AttackSpeed = 3;
-    public const int AttackTimer = 4;
-    public const int CanAttack = 5;
-    public const int CanJumpDown = 6;
-    public const int CanMove = 7;
-    public const int Damage = 8;
-    public const int Direction = 9;
-    public const int eee = 10;
-    public const int Enemy = 11;
-    public const int EnemyMoveTimer = 12;
-    public const int FaceRight = 13;
-    public const int FindPlayer = 14;
-    public const int FlipTimer = 15;
-    public const int Freeze = 16;
-    public const int FreezeTimer = 17;
-    public const int HP = 18;
-    public const int HPUi = 19;
-    public const int Jump = 20;
-    public const int JumpForce = 21;
-    public const int JumpSpeed = 22;
-    public const int JumpTimes = 23;
-    public const int Movement = 24;
-    public const int Moving = 25;
-    public const int Player = 26;
-    public const int PointToPlayer = 27;
-    public const int Position = 28;
-    public const int PositionListener = 29;
-    public const int Resource = 30;
-    public const int Speed = 31;
-    public const int Sprite = 32;
-    public const int Timer = 33;
-    public const int tttt = 34;
-    public const int Velocity = 35;
-    public const int VelocityX = 36;
-    public const int View = 37;
+    public const int Air = 0;
+    public const int ATK = 1;
+    public const int AttackComand = 2;
+    public const int Attacking = 3;
+    public const int AttackRange = 4;
+    public const int AttackSpeed = 5;
+    public const int AttackTimer = 6;
+    public const int CanAttack = 7;
+    public const int CanJumpDown = 8;
+    public const int CanMove = 9;
+    public const int Damage = 10;
+    public const int Direction = 11;
+    public const int eee = 12;
+    public const int Enemy = 13;
+    public const int EnemyMoveTimer = 14;
+    public const int FaceRight = 15;
+    public const int FindPlayer = 16;
+    public const int FlipTimer = 17;
+    public const int Freeze = 18;
+    public const int FreezeTimer = 19;
+    public const int Ground = 20;
+    public const int HP = 21;
+    public const int HPUi = 22;
+    public const int JumpCommand = 23;
+    public const int JumpForce = 24;
+    public const int JumpSpeed = 25;
+    public const int JumpTimes = 26;
+    public const int Movement = 27;
+    public const int Moving = 28;
+    public const int Player = 29;
+    public const int PointToPlayer = 30;
+    public const int Position = 31;
+    public const int PositionListener = 32;
+    public const int Resource = 33;
+    public const int Speed = 34;
+    public const int Sprite = 35;
+    public const int Timer = 36;
+    public const int tttt = 37;
+    public const int Velocity = 38;
+    public const int VelocityX = 39;
+    public const int View = 40;
 
-    public const int TotalComponents = 38;
+    public const int TotalComponents = 41;
 
     public static readonly string[] componentNames = {
+        "Air",
         "ATK",
-        "Attack",
+        "AttackComand",
+        "Attacking",
         "AttackRange",
         "AttackSpeed",
         "AttackTimer",
@@ -68,9 +73,10 @@ public static class GameComponentsLookup {
         "FlipTimer",
         "Freeze",
         "FreezeTimer",
+        "Ground",
         "HP",
         "HPUi",
-        "Jump",
+        "JumpCommand",
         "JumpForce",
         "JumpSpeed",
         "JumpTimes",
@@ -91,8 +97,10 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AirComponent),
         typeof(ATKComponent),
-        typeof(AttackComponent),
+        typeof(AttackComandComponent),
+        typeof(AttackingComponent),
         typeof(AttackRangeComponent),
         typeof(AttackSpeedComponent),
         typeof(AttackTimerComponent),
@@ -109,9 +117,10 @@ public static class GameComponentsLookup {
         typeof(FlipTimerComponent),
         typeof(FreezeComponent),
         typeof(FreezeTimerComponent),
+        typeof(GroundComponent),
         typeof(HPComponent),
         typeof(HPUiComponent),
-        typeof(JumpComponent),
+        typeof(JumpCommandComponent),
         typeof(JumpForceComponent),
         typeof(JumpSpeedComponent),
         typeof(JumpTimesComponent),

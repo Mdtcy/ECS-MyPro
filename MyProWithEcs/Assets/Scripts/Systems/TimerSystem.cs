@@ -8,7 +8,7 @@ public class TimerSystem : IExecuteSystem
     public TimerSystem(Contexts contexts)
     {
         
-        _timers = contexts.game.GetGroup(GameMatcher.AnyOf(GameMatcher.Timer,GameMatcher.EnemyMoveTimer,GameMatcher.FlipTimer));
+        _timers = contexts.game.GetGroup(GameMatcher.AnyOf(GameMatcher.Timer,GameMatcher.EnemyMoveTimer,GameMatcher.FlipTimer,GameMatcher.AttackTimer));
     }
 
     public void Execute()
@@ -19,18 +19,27 @@ public class TimerSystem : IExecuteSystem
             {
                 e.timer.value = e.timer.value - Time.deltaTime;
             }
-            else if (e.hasEnemyMoveTimer)
+            if (e.hasEnemyMoveTimer)
             {
                 
                 e.enemyMoveTimer.value = e.enemyMoveTimer.value - Time.deltaTime;
                 if(e.enemyMoveTimer.value<0)
                     e.RemoveEnemyMoveTimer();
             }
-            else if(e.hasFlipTimer)
+            if(e.hasFlipTimer)
             {
                  e.ReplaceFlipTimer(e.flipTimer.value-Time.deltaTime);
             }
             
+            if(e.hasAttackTimer)
+            {
+                e.attackTimer.value = e.attackTimer.value - Time.deltaTime;
+                if (e.attackTimer.value <= 0)
+                {
+                    e.RemoveAttackTimer();
+                    e.isAttacking = false;
+                }
+            }
         }
     }
 }

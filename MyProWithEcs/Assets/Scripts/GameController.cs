@@ -72,17 +72,26 @@ public class GameController : MonoBehaviour
              //.Add(new AttackStopSystem(contexts))
              .Add(new PlayerControSystem(contexts))
 
+
              
 
              .Add(new EnemyAiSystem(contexts)) // FindPlayer Direction Attack     //enemy view 
 
              .Add(new FreezeSystem(contexts))
-             .Add(new AttackSystem(contexts)) //attack timer moving  //相关但不对它进行操作的 attackSpeed
+
+             .Add(new AttackSystem(contexts)) //****attack timer moving  //相关但不对它进行操作的 attackSpeed
              .Add(new DamageSystem(contexts)) //damage,hp
 
-             .Add(new VelocityXSystem(contexts))  //当有能影响flip attack velocity jump系统的东西出现，他们都有条件要被更新
-             .Add(new JumpTSystem(contexts)) //Jump
-             .Add(new FlipSystem(contexts));
+             .Add(new VelocityXSystem(contexts)) //****当有能影响flip attack velocity jump系统的东西出现，他们都有条件要被更新
+             .Add(new JumpTSystem(contexts)) //****Jump
+             .Add(new UpdateIfAirSystem(contexts))
+             .Add(new FlipSystem(contexts))
+
+
+             //cleanup
+             .Add(new CommandCleanSystem(contexts));
+
+
 
     }
 }

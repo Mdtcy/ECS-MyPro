@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly JumpComponent jumpComponent = new JumpComponent();
+    static readonly AirComponent airComponent = new AirComponent();
 
-    public bool isJump {
-        get { return HasComponent(GameComponentsLookup.Jump); }
+    public bool isAir {
+        get { return HasComponent(GameComponentsLookup.Air); }
         set {
-            if (value != isJump) {
-                var index = GameComponentsLookup.Jump;
+            if (value != isAir) {
+                var index = GameComponentsLookup.Air;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : jumpComponent;
+                            : airComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherJump;
+    static Entitas.IMatcher<GameEntity> _matcherAir;
 
-    public static Entitas.IMatcher<GameEntity> Jump {
+    public static Entitas.IMatcher<GameEntity> Air {
         get {
-            if (_matcherJump == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Jump);
+            if (_matcherAir == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Air);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherJump = matcher;
+                _matcherAir = matcher;
             }
 
-            return _matcherJump;
+            return _matcherAir;
         }
     }
 }

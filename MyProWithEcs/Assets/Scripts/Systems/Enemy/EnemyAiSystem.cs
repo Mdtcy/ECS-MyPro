@@ -309,13 +309,13 @@ public class EnemyAiSystem : IExecuteSystem
                                 e.attackRange.value)
                             {
                                 e.ReplaceDirection(0);
-                                e.isAttack = true;
+                                e.isAttackComand = true;
                             }
                             else if((go.Position.x - e.view.IViewControllerInstance.Position.x)<-e.attackRange.value)
                             {
                                 if (leftWall.collider != null)
                                 {
-                                    e.isJump = true;
+                                    e.isJumpCommand = true;
                                     e.ReplaceDirection(0);
                                 }
                                 else 
@@ -326,7 +326,7 @@ public class EnemyAiSystem : IExecuteSystem
                                 if (rightWall.collider != null)
                                 {
                                     e.ReplaceDirection(0);
-                                    e.isJump = true;
+                                    e.isJumpCommand= true;
                                 }
                                 else
                                     e.ReplaceDirection(1);
